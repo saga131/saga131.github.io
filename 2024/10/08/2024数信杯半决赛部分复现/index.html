@@ -6,21 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>saga131的blog</title>
+  <title>2024数信杯半决赛部分复现 | saga131的blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <!-- <meta name="keywords" content="">
-    <meta name="description" content=""> -->
-  
-  <meta property="og:type" content="website">
-<meta property="og:title" content="saga131的blog">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="赛后向学长要的附件和wp，复现一手，算是加深对coppersmith的理解。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2024数信杯半决赛部分复现">
+<meta property="og:url" content="http://example.com/2024/10/08/2024%E6%95%B0%E4%BF%A1%E6%9D%AF%E5%8D%8A%E5%86%B3%E8%B5%9B%E9%83%A8%E5%88%86%E5%A4%8D%E7%8E%B0/index.html">
 <meta property="og:site_name" content="saga131的blog">
+<meta property="og:description" content="赛后向学长要的附件和wp，复现一手，算是加深对coppersmith的理解。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/saga131/mypic/raw/master/img/image-20241008202155247.png">
+<meta property="article:published_time" content="2024-10-08T11:56:06.000Z">
+<meta property="article:modified_time" content="2024-10-09T06:24:22.739Z">
 <meta property="article:author" content="saga131">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/saga131/mypic/raw/master/img/image-20241008202155247.png">
   
     <link rel="alternative" href="/atom.xml" title="saga131的blog" type="application/atom+xml">
   
@@ -193,19 +195,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-  
-    <article id="post-2024数信杯半决赛部分复现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-2024数信杯半决赛部分复现" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2024/10/08/2024%E6%95%B0%E4%BF%A1%E6%9D%AF%E5%8D%8A%E5%86%B3%E8%B5%9B%E9%83%A8%E5%88%86%E5%A4%8D%E7%8E%B0/" target="_blank">2024数信杯半决赛部分复现</a>
-  
+    <h1 class="article-title" itemprop="name">
+      2024数信杯半决赛部分复现
     </h1>
   
 
@@ -219,6 +216,27 @@
   
   
     
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">1.4k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">7分</span>
+    </span>
+  </span>
+</div>
+
 
   
   </header>
@@ -226,9 +244,41 @@
   <div class="article-entry" itemprop="articleBody">
     
     <p>赛后向学长要的附件和wp，复现一手，算是加深对coppersmith的理解。</p>
-    
-    <a class="article-more-a" href="/2024/10/08/2024%E6%95%B0%E4%BF%A1%E6%9D%AF%E5%8D%8A%E5%86%B3%E8%B5%9B%E9%83%A8%E5%88%86%E5%A4%8D%E7%8E%B0/#more">more >></a>
-    
+<span id="more"></span>
+
+<h1 id="512RSA"><a href="#512RSA" class="headerlink" title="512RSA"></a>512RSA</h1><p>tag：多轮AMM</p>
+<h3 id="task-py"><a href="#task-py" class="headerlink" title="task.py"></a>task.py</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> secret <span class="keyword">import</span> flag</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gen</span>():</span><br><span class="line">    e = getPrime(<span class="number">12</span>)</span><br><span class="line">    p = getPrime(<span class="number">512</span>)</span><br><span class="line">    <span class="keyword">while</span> (p-<span class="number">1</span>) % e != <span class="number">0</span>:</span><br><span class="line">        e = getPrime(<span class="number">12</span>)</span><br><span class="line">        p = getPrime(<span class="number">512</span>)</span><br><span class="line">    <span class="keyword">return</span> p, e * getPrime(<span class="number">300</span>)</span><br><span class="line"></span><br><span class="line">p1, e1 = gen()</span><br><span class="line">p2, e2 = gen()</span><br><span class="line">p3, e3 = gen()</span><br><span class="line">p4, e4 = gen()</span><br><span class="line"></span><br><span class="line">params = [(p1, e1), (p2, e2),(p3, e3),(p4, e4)]</span><br><span class="line">params=<span class="built_in">sorted</span>(params, key = <span class="keyword">lambda</span> x : x[<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line">m = bytes_to_long(flag)</span><br><span class="line">c = <span class="built_in">pow</span>(m, e1, p1)</span><br><span class="line">c = <span class="built_in">pow</span>(c, e2, p2)</span><br><span class="line">c = <span class="built_in">pow</span>(c, e3, p3)</span><br><span class="line">c = <span class="built_in">pow</span>(c, e4, p4)</span><br><span class="line"></span><br><span class="line">p = [p1, p2, p3, p4]</span><br><span class="line">e = [e1, e2, e3, e4]</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;p = <span class="subst">&#123;p&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;e = <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;c = <span class="subst">&#123;c&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">p = [9971877305101532548667657113915432686374600625802767915440064066247538969690929504779569308758806158316830036732847609558927989368198515992358962884845999, 9686779713749996013370168873387336643810360139391110278373359707982679675197866831353082822950439414021110597331749608836927764104519058819809287999191277, 11738824822038281341750095913199075446517552586485188261315252543625912278840584386174541563838459902823978442587021089252281373649445095529570370997140353, 8385622786171806844076175753935694055996440456538617120122854340325548660120153189193604171523482203780916677672818268556891995843000386665967836853148101]</span></span><br><span class="line"><span class="string">e = [3949210634899972905354615323966329995013354120760848313001868527895893105358656676275468825581, 3352586350227882729695194848291019666469497650929882112900986499971706693129836865558906119017, 2538382896284047546927213869533310553533512722671755934207012576147843086855632406951937438613, 5811018619884267813495708620058955656757034290452722071543724890613376672936415477627562597173]</span></span><br><span class="line"><span class="string">c = 6584399172697878406122485312269951595848044260489518691299790064128553815820157618343563425157360368851091584911872688623840890520680003501265955854989154</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h3><p>e是p-1的一个因子，求$e * getPrime(300)$与$p-1$的最大公因数得到e，再用AMM算法解决</p>
+<p>但这里我们遇到的是多轮加密，需要解4次</p>
+<p>用AMM算法会产生很多种可能性</p>
+<p>实际操作下来有</p>
+<p>$2081·2539·2347·3413$种可能性</p>
+<p>借助师傅们的文章</p>
+<p>文章链接：<a target="_blank" rel="noopener" href="https://xz.aliyun.com/t/14471?time__1311=GqAxuQi=iQGQG=D/D0eHGk8yy14RohGiubD">crypto-AMM算法 - 先知社区 (aliyun.com)</a></p>
+<p><img src="https://gitee.com/saga131/mypic/raw/master/img/image-20241008202155247.png" alt="image-20241008202155247"></p>
+<p>有<br>$$<br>a^{p-1} \equiv 1 \mod p<br>$$</p>
+<p>$$<br>c_3^{\frac{p-1}{e}} \equiv (m_3^{e})^{\frac{p-1}{e}}\equiv m_3^{p-1} \equiv 1 \mod p<br>$$</p>
+<p>那么只有满足这个式子的$c_3$才能进入下一步，经过筛选</p>
+<p>每一次的可能性结果降到了个位数。</p>
+<p>跟师傅交流后，说</p>
+<p>”这题有个非常简单的解法，sagemath 10.x有限域开根秒出结果“</p>
+<p>等最近安装arch和sagemath后研究一下</p>
+<h3 id="EXP"><a href="#EXP" class="headerlink" title="EXP"></a>EXP</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sagemath 9.3</span></span><br><span class="line"><span class="comment"># finish in 1m18.9s </span></span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="comment"># AMM算法得到一个解，About 3 seconds to run</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">AMM</span>(<span class="params">o, r, q</span>):</span><br><span class="line">    start = time.time()</span><br><span class="line">    <span class="comment">#print(&#x27;\n----------------------------------------------------------------------------------&#x27;)</span></span><br><span class="line">    <span class="comment">#print(&#x27;Start to run Adleman-Manders-Miller Root Extraction Method&#x27;)</span></span><br><span class="line">    <span class="comment">#print(&#x27;Try to find one &#123;:#x&#125;th root of &#123;&#125; modulo &#123;&#125;&#x27;.format(r, o, q))</span></span><br><span class="line">    g = GF(q)</span><br><span class="line">    o = g(o)</span><br><span class="line">    p = g(random.randint(<span class="number">1</span>, q))</span><br><span class="line">    <span class="keyword">while</span> p ^ ((q-<span class="number">1</span>) // r) == <span class="number">1</span>:</span><br><span class="line">        p = g(random.randint(<span class="number">1</span>, q))</span><br><span class="line">    <span class="comment">#print(&#x27;[+] Find p:&#123;&#125;&#x27;.format(p))</span></span><br><span class="line">    t = <span class="number">0</span></span><br><span class="line">    s = q - <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> s % r == <span class="number">0</span>:</span><br><span class="line">        t += <span class="number">1</span></span><br><span class="line">        s = s // r</span><br><span class="line">    <span class="comment">#print(&#x27;[+] Find s:&#123;&#125;, t:&#123;&#125;&#x27;.format(s, t))</span></span><br><span class="line">    k = <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> (k * s + <span class="number">1</span>) % r != <span class="number">0</span>:</span><br><span class="line">        k += <span class="number">1</span></span><br><span class="line">    alp = (k * s + <span class="number">1</span>) // r</span><br><span class="line">    <span class="comment">#print(&#x27;[+] Find alp:&#123;&#125;&#x27;.format(alp))</span></span><br><span class="line">    a = p ^ (r**(t-<span class="number">1</span>) * s)</span><br><span class="line">    b = o ^ (r*alp - <span class="number">1</span>)</span><br><span class="line">    c = p ^ s</span><br><span class="line">    h = <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, t):</span><br><span class="line">        d = b ^ (r^(t-<span class="number">1</span>-i))</span><br><span class="line">        <span class="keyword">if</span> d == <span class="number">1</span>:</span><br><span class="line">            j = <span class="number">0</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;[+] Calculating DLP...&#x27;</span>)</span><br><span class="line">            j = - dicreat_log(a, d)</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;[+] Finish DLP...&#x27;</span>)</span><br><span class="line">        b = b * (c^r)^j</span><br><span class="line">        h = h * c^j</span><br><span class="line">        c = c ^ r</span><br><span class="line">    result = o^alp * h</span><br><span class="line">    end = time.time()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Finished in &#123;&#125; seconds.&quot;</span>.<span class="built_in">format</span>(end - start))</span><br><span class="line">    <span class="comment">#print(&#x27;Find one solution: &#123;&#125;&#x27;.format(result))</span></span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"><span class="comment"># 找到所有的primitive nth root</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">findAllPRoot</span>(<span class="params">p, e</span>):</span><br><span class="line">    <span class="comment">#print(&quot;Start to find all the Primitive &#123;:#x&#125;th root of 1 modulo &#123;&#125;.&quot;.format(e, p))</span></span><br><span class="line">    start = time.time()</span><br><span class="line">    proot = <span class="built_in">set</span>()</span><br><span class="line">    <span class="keyword">while</span> <span class="built_in">len</span>(proot) &lt; e:</span><br><span class="line">        proot.add(<span class="built_in">pow</span>(random.randint(<span class="number">2</span>, p-<span class="number">1</span>), (p-<span class="number">1</span>)//e, p))</span><br><span class="line">    end = time.time()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Finished in &#123;&#125; seconds.&quot;</span>.<span class="built_in">format</span>(end - start))</span><br><span class="line">    <span class="keyword">return</span> proot</span><br><span class="line"></span><br><span class="line"><span class="comment"># 得到所有解 </span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">findAllSolutions</span>(<span class="params">mp, proot, cp, p, e</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Start to find all the &#123;:#x&#125;th root of &#123;&#125; modulo &#123;&#125;.&quot;</span>.<span class="built_in">format</span>(e, cp, p))</span><br><span class="line">    start = time.time()</span><br><span class="line">    all_mp = <span class="built_in">set</span>()</span><br><span class="line">    <span class="keyword">for</span> root <span class="keyword">in</span> proot:</span><br><span class="line">        mp2 = mp * root % p</span><br><span class="line">        <span class="comment">#assert pow(mp2, e, p) == cp</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">pow</span>(mp2, e, p) != cp:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        all_mp.add(mp2)</span><br><span class="line">    end = time.time()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Finished in &#123;&#125; seconds.&quot;</span>.<span class="built_in">format</span>(end - start))</span><br><span class="line">    <span class="keyword">return</span> all_mp</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_c</span>(<span class="params">c, p, e, g</span>):</span><br><span class="line">    e = e // g</span><br><span class="line">    d = inverse_mod(e, p-<span class="number">1</span>)</span><br><span class="line">    c = <span class="built_in">pow</span>(c, d, p)</span><br><span class="line">    <span class="comment"># AMM</span></span><br><span class="line">    e = g</span><br><span class="line">    <span class="keyword">assert</span> is_prime(p) == <span class="literal">True</span> </span><br><span class="line">    <span class="keyword">assert</span>(p % <span class="built_in">pow</span>(e, <span class="number">2</span>) % e == <span class="number">1</span>)</span><br><span class="line">    cp = c % p</span><br><span class="line">    mp = AMM(cp, e, p)</span><br><span class="line">    p_proot = findAllPRoot(p, e)</span><br><span class="line">    mps = findAllSolutions(mp, p_proot, cp, p, e)</span><br><span class="line">    <span class="keyword">return</span> mps</span><br><span class="line"></span><br><span class="line">p = [<span class="number">9971877305101532548667657113915432686374600625802767915440064066247538969690929504779569308758806158316830036732847609558927989368198515992358962884845999</span>, <span class="number">9686779713749996013370168873387336643810360139391110278373359707982679675197866831353082822950439414021110597331749608836927764104519058819809287999191277</span>, <span class="number">11738824822038281341750095913199075446517552586485188261315252543625912278840584386174541563838459902823978442587021089252281373649445095529570370997140353</span>, <span class="number">8385622786171806844076175753935694055996440456538617120122854340325548660120153189193604171523482203780916677672818268556891995843000386665967836853148101</span>]</span><br><span class="line">e = [<span class="number">3949210634899972905354615323966329995013354120760848313001868527895893105358656676275468825581</span>, <span class="number">3352586350227882729695194848291019666469497650929882112900986499971706693129836865558906119017</span>, <span class="number">2538382896284047546927213869533310553533512722671755934207012576147843086855632406951937438613</span>, <span class="number">5811018619884267813495708620058955656757034290452722071543724890613376672936415477627562597173</span>]</span><br><span class="line">c = <span class="number">6584399172697878406122485312269951595848044260489518691299790064128553815820157618343563425157360368851091584911872688623840890520680003501265955854989154</span></span><br><span class="line"></span><br><span class="line">g = [gcd(p[i]-<span class="number">1</span>, e[i]) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>)]</span><br><span class="line"><span class="built_in">print</span>(g)</span><br><span class="line"></span><br><span class="line">c_list = [c]</span><br><span class="line"><span class="keyword">for</span> k <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">3</span>,-<span class="number">1</span>,-<span class="number">1</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;第&#123;i&#125;次&quot;</span>.<span class="built_in">format</span>(i=<span class="number">4</span>-k))</span><br><span class="line">    prev_list = []</span><br><span class="line">    <span class="keyword">for</span> c <span class="keyword">in</span> c_list:</span><br><span class="line">        prev_c = get_c(c, p[k], e[k], g[k])</span><br><span class="line">        prev_list += prev_c</span><br><span class="line">    prev_list = <span class="built_in">list</span>(<span class="built_in">set</span>(prev_list))</span><br><span class="line">    prev_list = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">set</span>(prev_list)))</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;个数：<span class="subst">&#123;<span class="built_in">len</span>(prev_list)&#125;</span>&#x27;</span>)</span><br><span class="line">    c_list = []</span><br><span class="line">    <span class="keyword">if</span> k == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">for</span> m <span class="keyword">in</span> prev_list:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">pow</span>(<span class="built_in">int</span>(m),(p[k-<span class="number">1</span>]-<span class="number">1</span>)//g[k-<span class="number">1</span>],p[k-<span class="number">1</span>]) == <span class="number">1</span>:</span><br><span class="line">            c_list.append(<span class="built_in">int</span>(m))</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;筛选后的个数：<span class="subst">&#123;<span class="built_in">len</span>(c_list)&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> prev_list:</span><br><span class="line">    <span class="keyword">if</span> <span class="string">b&#x27;flag&#x27;</span> <span class="keyword">in</span> long_to_bytes(i):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;找到答案！&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(long_to_bytes(i))</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="2024"><a href="#2024" class="headerlink" title="2024"></a>2024</h1><p>tag：熵，coppersmith主动消除</p>
+<h3 id="task-py-1"><a href="#task-py-1" class="headerlink" title="task.py"></a>task.py</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">p = getPrime(<span class="number">1024</span>)</span><br><span class="line">q = getPrime(<span class="number">1024</span>)</span><br><span class="line">n = p*q</span><br><span class="line">e = <span class="number">0x10001</span></span><br><span class="line"></span><br><span class="line">flag = <span class="built_in">open</span>(<span class="string">&quot;flag1.txt&quot;</span>, <span class="string">&quot;r&quot;</span>).readline().strip()</span><br><span class="line">m = bytes_to_long(flag.encode())</span><br><span class="line">c = <span class="built_in">pow</span>(m, e, n)</span><br><span class="line"></span><br><span class="line">entropy = <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">    entropy *= random.randint(<span class="number">1</span>, <span class="number">2024</span>)</span><br><span class="line">hint = <span class="number">2024</span> * (p+entropy) + <span class="number">4202</span> * (q-entropy)</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;flag1.enc&quot;</span>, <span class="string">&quot;w&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(<span class="string">f&quot;n: <span class="subst">&#123;n&#125;</span>\n&quot;</span>)</span><br><span class="line">    f.write(<span class="string">f&quot;e: <span class="subst">&#123;e&#125;</span>\n&quot;</span>)</span><br><span class="line">    f.write(<span class="string">f&quot;c: <span class="subst">&#123;c&#125;</span>\n&quot;</span>)</span><br><span class="line">    f.write(<span class="string">f&quot;hint: <span class="subst">&#123;hint&#125;</span>\n&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>另一个附件链接</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">通过网盘分享的文件：flag1.enc</span><br><span class="line">链接: https://pan.baidu.com/s/1J6yosAEgzWkBZagwNmv5YA?pwd=g2h7 提取码: g2h7 </span><br></pre></td></tr></table></figure>
+
+<h3 id="解析-1"><a href="#解析-1" class="headerlink" title="解析"></a>解析</h3><p>没看wp之前，因为测试过entropy最大范围在112位左右，想把hint的低112抹去减少entropy的影响，然后求p+q与n的方程式，得到高位p，最后coppersmith解p，但是没解出来（脚本如下）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 想用抹去低位来消除entropy的影响，但没出</span></span><br><span class="line">hint = hint&gt;&gt;<span class="number">112</span>&lt;&lt;<span class="number">112</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_full_p2</span>(<span class="params">ph, n</span>):</span><br><span class="line">    PR.&lt;x&gt; = PolynomialRing(Zmod(n))</span><br><span class="line">    nbits = n.nbits()</span><br><span class="line">    phbits = ph.nbits()</span><br><span class="line">    f = x + ph</span><br><span class="line">    f = f.monic()</span><br><span class="line">    roots = f.small_roots(X=<span class="number">2</span>^<span class="number">112</span>, beta=<span class="number">0.4</span>)</span><br><span class="line">    <span class="keyword">if</span> roots != []:</span><br><span class="line">        x = roots[<span class="number">0</span>]</span><br><span class="line">        p = gmpy2.gcd(<span class="built_in">int</span>(x + ph), <span class="built_in">int</span>(n))</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">int</span>(p)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">find_p2_low</span>(<span class="params">h, n</span>):</span><br><span class="line">    X = var(<span class="string">&#x27;X&#x27;</span>)</span><br><span class="line">    results = solve_mod([<span class="number">4202</span>*n==X*(h - <span class="number">2024</span>*X)],<span class="number">2</span>^h.nbits())</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> results:</span><br><span class="line">        ph = ZZ(x[<span class="number">0</span>])</span><br><span class="line">        p = get_full_p2(ph, n)</span><br><span class="line">        <span class="keyword">if</span> p <span class="keyword">and</span> p != <span class="number">1</span> <span class="keyword">and</span> p != n:</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">int</span>(p)</span><br><span class="line">        </span><br><span class="line">p = find_p2_low(hint, n)</span><br><span class="line"><span class="built_in">print</span>(p) <span class="comment"># None</span></span><br></pre></td></tr></table></figure>
+
+<p>初步鉴定solve_mod与roots求根的区别，没有mod，只是多项式，不是同余式</p>
+<h3 id="EXP-1"><a href="#EXP-1" class="headerlink" title="EXP"></a>EXP</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sagemath 9.3</span></span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *    </span><br><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"><span class="keyword">from</span> tqdm <span class="keyword">import</span> trange</span><br><span class="line">hint = </span><br><span class="line">n = </span><br><span class="line">c = </span><br><span class="line">e = </span><br><span class="line"></span><br><span class="line">RF = RealField(<span class="number">2048</span>)</span><br><span class="line">x = polygen(RF)</span><br><span class="line">f = x*(hint - <span class="number">2024</span>*x) - <span class="number">4202</span>*n</span><br><span class="line">high_p = <span class="built_in">int</span>(f.roots()[<span class="number">0</span>][<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line">R.&lt;x&gt; = PolynomialRing(Zmod(n), implementation=<span class="string">&#x27;NTL&#x27;</span>)  </span><br><span class="line">f = high_p + x</span><br><span class="line">f = f.monic()</span><br><span class="line">x0 = f.small_roots(X = <span class="number">2</span>^<span class="number">111</span>, beta = <span class="number">0.1</span>)[<span class="number">0</span>] </span><br><span class="line">p = <span class="built_in">int</span>(f(x0))</span><br><span class="line"><span class="built_in">print</span>(p)</span><br><span class="line">p = <span class="built_in">int</span>(p)</span><br><span class="line">q = n//p</span><br><span class="line"><span class="keyword">assert</span>(p*q==n)</span><br><span class="line">phi = (p-<span class="number">1</span>)*(q-<span class="number">1</span>)</span><br><span class="line">d = gmpy2.invert(e, phi)</span><br><span class="line">m = <span class="built_in">pow</span>(c, d, n)</span><br><span class="line"><span class="built_in">print</span>(long_to_bytes(<span class="built_in">int</span>(m)).decode())</span><br></pre></td></tr></table></figure>
+
+
     
 
     
@@ -242,16 +292,76 @@
     
 
     
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2024/10/08/2024%E6%95%B0%E4%BF%A1%E6%9D%AF%E5%8D%8A%E5%86%B3%E8%B5%9B%E9%83%A8%E5%88%86%E5%A4%8D%E7%8E%B0/">展开全文 >></a>
-    </p>
+
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2024/10/08/2024%E6%95%B0%E4%BF%A1%E6%9D%AF%E5%8D%8A%E5%86%B3%E8%B5%9B%E9%83%A8%E5%88%86%E5%A4%8D%E7%8E%B0/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
     
     <div class="clearfix"></div>
   </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2024/09/23/%E5%85%B3%E4%BA%8ERSA%E7%9A%84%E5%8E%9F%E7%90%86%E6%8E%A2%E7%A9%B6%E5%8F%8A%E5%BB%B6%E7%94%B3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于RSA的原理探究及延申</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -266,556 +376,33 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-关于RSA的原理探究及延申" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2024/09/23/%E5%85%B3%E4%BA%8ERSA%E7%9A%84%E5%8E%9F%E7%90%86%E6%8E%A2%E7%A9%B6%E5%8F%8A%E5%BB%B6%E7%94%B3/" target="_blank">关于RSA的原理探究及延申</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2024/09/23/%E5%85%B3%E4%BA%8ERSA%E7%9A%84%E5%8E%9F%E7%90%86%E6%8E%A2%E7%A9%B6%E5%8F%8A%E5%BB%B6%E7%94%B3/" class="archive-article-date">
-        <time datetime="2024-09-23T12:35:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-09-23</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>z</p>
-<p>做御宛杯（季博杯）的babyrsa有感，加上moectf2024的验证后，写这篇博客</p>
-    
-    <a class="article-more-a" href="/2024/09/23/%E5%85%B3%E4%BA%8ERSA%E7%9A%84%E5%8E%9F%E7%90%86%E6%8E%A2%E7%A9%B6%E5%8F%8A%E5%BB%B6%E7%94%B3/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2024/09/23/%E5%85%B3%E4%BA%8ERSA%E7%9A%84%E5%8E%9F%E7%90%86%E6%8E%A2%E7%A9%B6%E5%8F%8A%E5%BB%B6%E7%94%B3/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#512RSA"><span class="toc-number">1.</span> <span class="toc-text">512RSA</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#task-py"><span class="toc-number">1.0.1.</span> <span class="toc-text">task.py</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E6%9E%90"><span class="toc-number">1.0.2.</span> <span class="toc-text">解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#EXP"><span class="toc-number">1.0.3.</span> <span class="toc-text">EXP</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2024"><span class="toc-number">2.</span> <span class="toc-text">2024</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#task-py-1"><span class="toc-number">2.0.1.</span> <span class="toc-text">task.py</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E6%9E%90-1"><span class="toc-number">2.0.2.</span> <span class="toc-text">解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#EXP-1"><span class="toc-number">2.0.3.</span> <span class="toc-text">EXP</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
 
-  
-    <article id="post-first-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2024/09/21/first-blog/" target="_blank">first-blog</a>
-  
-    </h1>
-  
 
 
-  
-  
-<a href="/2024/09/21/first-blog/" class="archive-article-date">
-        <time datetime="2024-09-21T06:07:38.243Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-09-21</time>
-</a>
 
-  
-  
-    
 
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>各位师傅好，这里是saga131的博客</p>
-<p>第一个博客先来介绍一下自己(落款于9月1号)</p>
-    
-    <a class="article-more-a" href="/2024/09/21/first-blog/#more">more >></a>
-    
-    
 
-    
 
-    
 
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
 
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2024/09/21/first-blog/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-写博客的小记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2024/09/17/%E5%86%99%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%B0%8F%E8%AE%B0%E5%BD%95/" target="_blank">写博客的小记录</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2024/09/17/%E5%86%99%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%B0%8F%E8%AE%B0%E5%BD%95/" class="archive-article-date">
-        <time datetime="2024-09-17T11:44:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-09-17</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>记录写博客遇到的小弯路</p>
-    
-    <a class="article-more-a" href="/2024/09/17/%E5%86%99%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%B0%8F%E8%AE%B0%E5%BD%95/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2024/09/17/%E5%86%99%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%B0%8F%E8%AE%B0%E5%BD%95/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-共模攻击" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2024/09/17/%E5%85%B1%E6%A8%A1%E6%94%BB%E5%87%BB/" target="_blank">共模攻击</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2024/09/17/%E5%85%B1%E6%A8%A1%E6%94%BB%E5%87%BB/" class="archive-article-date">
-        <time datetime="2024-09-17T10:04:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-09-17</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>​	共模攻击是一种针对RSA加密的攻击方式，当使用相同的模数n和不同的公钥指数e加密相同的消息时，攻击者可以不解密直接获取明文。基础形式的共模攻击要求公钥指数e互素，利用斐蜀定理可以找到解密需要的参数。当e不互素时，可以找到最大公约数，结合模运算的性质也能实施攻击。NSSCTF工坊提供了两个实例题目，展示了共模攻击的具体应用。第一个题目中e互素，直接应用共模攻击原理；第二个题目中e不互素，需要先找到最大公约数，再进行相应的计算。这些题目帮助理解共模攻击的原理和技巧。(该摘要由ai生成)</p>
-    
-    <a class="article-more-a" href="/2024/09/17/%E5%85%B1%E6%A8%A1%E6%94%BB%E5%87%BB/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2024/09/17/%E5%85%B1%E6%A8%A1%E6%94%BB%E5%87%BB/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-coppersmith铜匠入门" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2024/09/01/coppersmith%E9%93%9C%E5%8C%A0%E5%85%A5%E9%97%A8/" target="_blank">coppersmith铜匠入门</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2024/09/01/coppersmith%E9%93%9C%E5%8C%A0%E5%85%A5%E9%97%A8/" class="archive-article-date">
-        <time datetime="2024-09-01T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-09-01</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>芝士就是力量</p>
-    
-    <a class="article-more-a" href="/2024/09/01/coppersmith%E9%93%9C%E5%8C%A0%E5%85%A5%E9%97%A8/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2024/09/01/coppersmith%E9%93%9C%E5%8C%A0%E5%85%A5%E9%97%A8/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-冀信杯2024" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/" target="_blank">冀信杯2024</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/" class="archive-article-date">
-        <time datetime="2024-08-27T13:04:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-27</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="冀信杯"><a href="#冀信杯" class="headerlink" title="冀信杯"></a>冀信杯</h1><p>这次靠队里的bin✌带飞，自己靠运气拿到了两道题misc，另一道misc题是队友出，没有web和密码的比赛。</p>
-    
-    <a class="article-more-a" href="/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-密码学入门指北" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2024/08/12/%E5%AF%86%E7%A0%81%E5%AD%A6%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97/" target="_blank">密码学入门指北</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2024/08/12/%E5%AF%86%E7%A0%81%E5%AD%A6%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97/" class="archive-article-date">
-        <time datetime="2024-08-12T05:45:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-12</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>​	本文为密码学入门手册，简要介绍了密码学的概念、学习密码学的意义、所需工具及学习路线。重点讲解了RSA公钥加密算法的基本原理和数学基础，并提供了Python代码实现示例。最后，概述了后续学习计划和密码学道路上的鼓励。</p>
-<p>​	</p>
-    
-    <a class="article-more-a" href="/2024/08/12/%E5%AF%86%E7%A0%81%E5%AD%A6%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2024/08/12/%E5%AF%86%E7%A0%81%E5%AD%A6%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -843,8 +430,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

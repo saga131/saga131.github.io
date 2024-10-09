@@ -18,7 +18,7 @@
 <meta property="og:description" content="芝士就是力量">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-01T12:30:00.000Z">
-<meta property="article:modified_time" content="2024-09-19T12:21:14.221Z">
+<meta property="article:modified_time" content="2024-09-26T12:54:51.693Z">
 <meta property="article:author" content="saga131">
 <meta name="twitter:card" content="summary">
   
@@ -221,7 +221,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">2.4k字</span>
+      <span class="post-count">2.5k字</span>
     </span>
   </span>
 
@@ -331,6 +331,7 @@
 <p>  task2</p>
 <p>  已知p+q（后称low）的624低位，p、q是1024位的，通过解这个式子n&#x3D;&#x3D;X*(low - X)，得到相对应的p或q的624低位，再copper一下就能出</p>
 <p>  task3</p>
+<p>  参考<a target="_blank" rel="noopener" href="https://tangcuxiaojikuai.xyz/post/e872e217.html">2023-鹏城杯-wp-crypto | 糖醋小鸡块的blog (tangcuxiaojikuai.xyz)</a>和<a target="_blank" rel="noopener" href="https://dexterjie.github.io/2024/04/26/%E8%B5%9B%E9%A2%98%E5%A4%8D%E7%8E%B0/2024XYCTF/#%E9%93%9C%E5%8C%A0">2024XYCTF | DexterJie’Blog</a></p>
 <p>  p^q异或部分泄露，通过复现师傅的exp，大概理解了代码运行原理</p>
 <p>  从异或结果入手，如果是1，那么p和q在对应的位置是相反的，在这个位置（p_，q_）赋予（0，1）或者（1，0），如果是0，那么就是相同的，（p_，q_）赋值（0，0）或者（1，1），得到311位的部分p后尝试copper</p>
 </li>

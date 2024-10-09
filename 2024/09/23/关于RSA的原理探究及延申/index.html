@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>saga131的blog</title>
+  <title>关于RSA的原理探究及延申 | saga131的blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <!-- <meta name="keywords" content="">
-    <meta name="description" content=""> -->
-  
-  <meta property="og:type" content="website">
-<meta property="og:title" content="saga131的blog">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="z 做御宛杯（季博杯）的babyrsa有感，加上moectf2024的验证后，写这篇博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于RSA的原理探究及延申">
+<meta property="og:url" content="http://example.com/2024/09/23/%E5%85%B3%E4%BA%8ERSA%E7%9A%84%E5%8E%9F%E7%90%86%E6%8E%A2%E7%A9%B6%E5%8F%8A%E5%BB%B6%E7%94%B3/index.html">
 <meta property="og:site_name" content="saga131的blog">
+<meta property="og:description" content="z 做御宛杯（季博杯）的babyrsa有感，加上moectf2024的验证后，写这篇博客">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-09-23T12:35:55.000Z">
+<meta property="article:modified_time" content="2024-09-23T13:13:16.507Z">
 <meta property="article:author" content="saga131">
 <meta name="twitter:card" content="summary">
   
@@ -193,96 +193,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-  
-    <article id="post-2024数信杯半决赛部分复现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-关于RSA的原理探究及延申" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2024/10/08/2024%E6%95%B0%E4%BF%A1%E6%9D%AF%E5%8D%8A%E5%86%B3%E8%B5%9B%E9%83%A8%E5%88%86%E5%A4%8D%E7%8E%B0/" target="_blank">2024数信杯半决赛部分复现</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2024/10/08/2024%E6%95%B0%E4%BF%A1%E6%9D%AF%E5%8D%8A%E5%86%B3%E8%B5%9B%E9%83%A8%E5%88%86%E5%A4%8D%E7%8E%B0/" class="archive-article-date">
-        <time datetime="2024-10-08T11:56:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-10-08</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>赛后向学长要的附件和wp，复现一手，算是加深对coppersmith的理解。</p>
-    
-    <a class="article-more-a" href="/2024/10/08/2024%E6%95%B0%E4%BF%A1%E6%9D%AF%E5%8D%8A%E5%86%B3%E8%B5%9B%E9%83%A8%E5%88%86%E5%A4%8D%E7%8E%B0/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2024/10/08/2024%E6%95%B0%E4%BF%A1%E6%9D%AF%E5%8D%8A%E5%86%B3%E8%B5%9B%E9%83%A8%E5%88%86%E5%A4%8D%E7%8E%B0/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-关于RSA的原理探究及延申" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2024/09/23/%E5%85%B3%E4%BA%8ERSA%E7%9A%84%E5%8E%9F%E7%90%86%E6%8E%A2%E7%A9%B6%E5%8F%8A%E5%BB%B6%E7%94%B3/" target="_blank">关于RSA的原理探究及延申</a>
-  
+    <h1 class="article-title" itemprop="name">
+      关于RSA的原理探究及延申
     </h1>
   
 
@@ -296,6 +214,27 @@
   
   
     
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">127字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">1分</span>
+    </span>
+  </span>
+</div>
+
 
   
   </header>
@@ -304,9 +243,16 @@
     
     <p>z</p>
 <p>做御宛杯（季博杯）的babyrsa有感，加上moectf2024的验证后，写这篇博客</p>
-    
-    <a class="article-more-a" href="/2024/09/23/%E5%85%B3%E4%BA%8ERSA%E7%9A%84%E5%8E%9F%E7%90%86%E6%8E%A2%E7%A9%B6%E5%8F%8A%E5%BB%B6%E7%94%B3/#more">more >></a>
-    
+<span id="more"></span>
+
+
+
+<p>RSA困难在于n的分解，我之前一直被这个所迷惑（也不是说这句话不对）。n分解p和q是为了求n的欧拉函数phi，从而进行rsa的解密。但如果n是素数呢？</p>
+<p>rsa加密公式<br>$$</p>
+<p>$$<br>解密公式<br>$$</p>
+<p>$$<br>关键在于ed&#x3D;1+k·phi ，有拓展欧拉函数</p>
+<p>$m^{1+k·phi} \mod n&#x3D; m·m^{phi·k} \mod n&#x3D;m·1^k&#x3D;m \mod n$</p>
+
     
 
     
@@ -320,16 +266,85 @@
     
 
     
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2024/09/23/%E5%85%B3%E4%BA%8ERSA%E7%9A%84%E5%8E%9F%E7%90%86%E6%8E%A2%E7%A9%B6%E5%8F%8A%E5%BB%B6%E7%94%B3/">展开全文 >></a>
-    </p>
+
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2024/09/23/%E5%85%B3%E4%BA%8ERSA%E7%9A%84%E5%8E%9F%E7%90%86%E6%8E%A2%E7%A9%B6%E5%8F%8A%E5%BB%B6%E7%94%B3/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
     
     <div class="clearfix"></div>
   </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
+  
+    <a href="/2024/10/08/2024%E6%95%B0%E4%BF%A1%E6%9D%AF%E5%8D%8A%E5%86%B3%E8%B5%9B%E9%83%A8%E5%88%86%E5%A4%8D%E7%8E%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          2024数信杯半决赛部分复现
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/09/21/first-blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">first-blog</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -344,478 +359,33 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-first-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2024/09/21/first-blog/" target="_blank">first-blog</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2024/09/21/first-blog/" class="archive-article-date">
-        <time datetime="2024-09-21T06:07:38.243Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-09-21</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>各位师傅好，这里是saga131的博客</p>
-<p>第一个博客先来介绍一下自己(落款于9月1号)</p>
-    
-    <a class="article-more-a" href="/2024/09/21/first-blog/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2024/09/21/first-blog/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
 
-  
-    <article id="post-写博客的小记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2024/09/17/%E5%86%99%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%B0%8F%E8%AE%B0%E5%BD%95/" target="_blank">写博客的小记录</a>
-  
-    </h1>
-  
 
 
-  
-  
-<a href="/2024/09/17/%E5%86%99%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%B0%8F%E8%AE%B0%E5%BD%95/" class="archive-article-date">
-        <time datetime="2024-09-17T11:44:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-09-17</time>
-</a>
 
-  
-  
-    
 
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>记录写博客遇到的小弯路</p>
-    
-    <a class="article-more-a" href="/2024/09/17/%E5%86%99%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%B0%8F%E8%AE%B0%E5%BD%95/#more">more >></a>
-    
-    
 
-    
 
-    
 
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
 
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2024/09/17/%E5%86%99%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%B0%8F%E8%AE%B0%E5%BD%95/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-共模攻击" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2024/09/17/%E5%85%B1%E6%A8%A1%E6%94%BB%E5%87%BB/" target="_blank">共模攻击</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2024/09/17/%E5%85%B1%E6%A8%A1%E6%94%BB%E5%87%BB/" class="archive-article-date">
-        <time datetime="2024-09-17T10:04:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-09-17</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>​	共模攻击是一种针对RSA加密的攻击方式，当使用相同的模数n和不同的公钥指数e加密相同的消息时，攻击者可以不解密直接获取明文。基础形式的共模攻击要求公钥指数e互素，利用斐蜀定理可以找到解密需要的参数。当e不互素时，可以找到最大公约数，结合模运算的性质也能实施攻击。NSSCTF工坊提供了两个实例题目，展示了共模攻击的具体应用。第一个题目中e互素，直接应用共模攻击原理；第二个题目中e不互素，需要先找到最大公约数，再进行相应的计算。这些题目帮助理解共模攻击的原理和技巧。(该摘要由ai生成)</p>
-    
-    <a class="article-more-a" href="/2024/09/17/%E5%85%B1%E6%A8%A1%E6%94%BB%E5%87%BB/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2024/09/17/%E5%85%B1%E6%A8%A1%E6%94%BB%E5%87%BB/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-coppersmith铜匠入门" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2024/09/01/coppersmith%E9%93%9C%E5%8C%A0%E5%85%A5%E9%97%A8/" target="_blank">coppersmith铜匠入门</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2024/09/01/coppersmith%E9%93%9C%E5%8C%A0%E5%85%A5%E9%97%A8/" class="archive-article-date">
-        <time datetime="2024-09-01T12:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-09-01</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>芝士就是力量</p>
-    
-    <a class="article-more-a" href="/2024/09/01/coppersmith%E9%93%9C%E5%8C%A0%E5%85%A5%E9%97%A8/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2024/09/01/coppersmith%E9%93%9C%E5%8C%A0%E5%85%A5%E9%97%A8/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-冀信杯2024" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/" target="_blank">冀信杯2024</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/" class="archive-article-date">
-        <time datetime="2024-08-27T13:04:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-27</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="冀信杯"><a href="#冀信杯" class="headerlink" title="冀信杯"></a>冀信杯</h1><p>这次靠队里的bin✌带飞，自己靠运气拿到了两道题misc，另一道misc题是队友出，没有web和密码的比赛。</p>
-    
-    <a class="article-more-a" href="/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-密码学入门指北" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2024/08/12/%E5%AF%86%E7%A0%81%E5%AD%A6%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97/" target="_blank">密码学入门指北</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2024/08/12/%E5%AF%86%E7%A0%81%E5%AD%A6%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97/" class="archive-article-date">
-        <time datetime="2024-08-12T05:45:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-12</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>​	本文为密码学入门手册，简要介绍了密码学的概念、学习密码学的意义、所需工具及学习路线。重点讲解了RSA公钥加密算法的基本原理和数学基础，并提供了Python代码实现示例。最后，概述了后续学习计划和密码学道路上的鼓励。</p>
-<p>​	</p>
-    
-    <a class="article-more-a" href="/2024/08/12/%E5%AF%86%E7%A0%81%E5%AD%A6%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2024/08/12/%E5%AF%86%E7%A0%81%E5%AD%A6%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -843,8 +413,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
