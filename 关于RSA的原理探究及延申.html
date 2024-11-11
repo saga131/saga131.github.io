@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://saga131.github.io">
-  <title>共模攻击 | saga131密之作坊</title>
+  <title>关于RSA的原理探究及延申 | saga131密之作坊</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="​	共模攻击是一种针对RSA加密的攻击方式，当使用相同的模数n和不同的公钥指数e加密相同的消息时，攻击者可以不解密直接获取明文。基础形式的共模攻击要求公钥指数e互素，利用斐蜀定理可以找到解密需要的参数。当e不互素时，可以找到最大公约数，结合模运算的性质也能实施攻击。NSSCTF工坊提供了两个实例题目，展示了共模攻击的具体应用。第一个题目中e互素，直接应用共模攻击原理；第二个题目中e不互素，需要先找">
-<meta property="og:type" content="article">
-<meta property="og:title" content="共模攻击">
-<meta property="og:url" content="http://saga131.github.io/2024/09/17/%E5%85%B1%E6%A8%A1%E6%94%BB%E5%87%BB/index.html">
+  <meta name="description" content="z 做御宛杯（季博杯）的babyrsa有感，加上moectf2024的验证后，写这篇博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="关于RSA的原理探究及延申">
+<meta property="og:url" content="http://saga131.github.io/%E5%85%B3%E4%BA%8ERSA%E7%9A%84%E5%8E%9F%E7%90%86%E6%8E%A2%E7%A9%B6%E5%8F%8A%E5%BB%B6%E7%94%B3.html">
 <meta property="og:site_name" content="saga131密之作坊">
-<meta property="og:description" content="​	共模攻击是一种针对RSA加密的攻击方式，当使用相同的模数n和不同的公钥指数e加密相同的消息时，攻击者可以不解密直接获取明文。基础形式的共模攻击要求公钥指数e互素，利用斐蜀定理可以找到解密需要的参数。当e不互素时，可以找到最大公约数，结合模运算的性质也能实施攻击。NSSCTF工坊提供了两个实例题目，展示了共模攻击的具体应用。第一个题目中e互素，直接应用共模攻击原理；第二个题目中e不互素，需要先找">
+<meta property="og:description" content="z 做御宛杯（季博杯）的babyrsa有感，加上moectf2024的验证后，写这篇博客">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-09-17T10:04:18.000Z">
-<meta property="article:modified_time" content="2024-09-17T12:09:42.126Z">
+<meta property="article:published_time" content="2024-09-23T12:35:55.000Z">
+<meta property="article:modified_time" content="2024-09-23T13:13:16.507Z">
 <meta property="article:author" content="saga131">
 <meta name="twitter:card" content="summary">
   
@@ -189,22 +189,22 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-共模攻击" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      共模攻击
+      关于RSA的原理探究及延申
     </h1>
   
 
 
   
   
-<a href="/2024/09/17/%E5%85%B1%E6%A8%A1%E6%94%BB%E5%87%BB/" class="archive-article-date">
-        <time datetime="2024-09-17T10:04:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-09-17</time>
+<a href="/%E5%85%B3%E4%BA%8ERSA%E7%9A%84%E5%8E%9F%E7%90%86%E6%8E%A2%E7%A9%B6%E5%8F%8A%E5%BB%B6%E7%94%B3.html" class="archive-article-date">
+        <time datetime="2024-09-23T12:35:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-09-23</time>
 </a>
 
   
@@ -217,7 +217,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">974字</span>
+      <span class="post-count">127字</span>
     </span>
   </span>
 
@@ -226,7 +226,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">4分</span>
+      <span class="post-count">1分</span>
     </span>
   </span>
 </div>
@@ -237,60 +237,17 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>​	共模攻击是一种针对RSA加密的攻击方式，当使用相同的模数n和不同的公钥指数e加密相同的消息时，攻击者可以不解密直接获取明文。基础形式的共模攻击要求公钥指数e互素，利用斐蜀定理可以找到解密需要的参数。当e不互素时，可以找到最大公约数，结合模运算的性质也能实施攻击。NSSCTF工坊提供了两个实例题目，展示了共模攻击的具体应用。第一个题目中e互素，直接应用共模攻击原理；第二个题目中e不互素，需要先找到最大公约数，再进行相应的计算。这些题目帮助理解共模攻击的原理和技巧。(该摘要由ai生成)</p>
+    <p>z</p>
+<p>做御宛杯（季博杯）的babyrsa有感，加上moectf2024的验证后，写这篇博客</p>
 <span id="more"></span>
 
-<h4 id="共模攻击"><a href="#共模攻击" class="headerlink" title="共模攻击"></a>共模攻击</h4><h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><h4 id="基础-n相同，加密了相同的m，用了两个e，公钥中的e互素（两个数最大公因数为1）"><a href="#基础-n相同，加密了相同的m，用了两个e，公钥中的e互素（两个数最大公因数为1）" class="headerlink" title="基础 n相同，加密了相同的m，用了两个e，公钥中的e互素（两个数最大公因数为1）"></a>基础 n相同，加密了相同的m，用了两个e，公钥中的e互素（两个数最大公因数为1）</h4><ul>
-<li>已知信息</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[e1,n] [e2, n] c1 c2 </span><br></pre></td></tr></table></figure>
 
-<p>式子<br>$$<br>c1 &#x3D; m^{e1} \mod n<br>$$</p>
-<p>$$<br>c2 &#x3D; m^{e2} \mod n<br>$$</p>
-<ul>
-<li>解析</li>
-</ul>
-<p>因为e1和e2是互素，运用翡镯定理，有<br>$$<br>e1·s1+e2·s2 &#x3D; 1<br>$$<br>而结合上面式子</p>
-<p>得到<br>$$<br>c1^{s1}·c2^{s2}&#x3D;m^{e1·s1}m^{e2·s2}&#x3D;m^{e1·s1+e2·s2}&#x3D;m^{1} \mod n<br>$$<br>由上，我们得到了一个不用找p和q也能解<code>rsa</code>的攻击方法。</p>
-<p>现在问题转移到如何找到这个s1和s2呢？</p>
-<p>用拓展欧几里得算法（gmpy2库的gcdext函数）</p>
-<p>对应一个方程<br>$$<br>a·x+b·y&#x3D;gcd(a,b)<br>$$<br>一定且有且只有一个整数解（x,y）</p>
-<p>代码小样</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_,s1,s2 = gmpy2.gcdext(a, b) </span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://gmpy2.readthedocs.io/en/latest/mpz.html#gmpy2.gcdext">gmpy2.gcdext(<em>a</em>, <em>b</em>, <em>&#x2F;</em>)→ tuple[mpz,mpz,mpz]</a></p>
-<p>Return a 3-element tuple (g,s,t) such that g &#x3D;&#x3D; gcd(a,b) and g &#x3D;&#x3D; a<em>s + b</em>t.</p>
-</blockquote>
-<p><code>gcdext函数</code>返回三个数，第一个是（a,b）的最大公因数，第二，三个是上面的（x，y）整数解</p>
-<h4 id="进阶，公钥的e并不互素"><a href="#进阶，公钥的e并不互素" class="headerlink" title="进阶，公钥的e并不互素"></a>进阶，公钥的e并不互素</h4><ul>
-<li>解析</li>
-</ul>
-<p>和上面的区别就是e1和e2不互素，那通过翡镯定理得到的式子就是</p>
-<p>$$<br>e1·s1+e2·s2&#x3D;gcd(e1,e2)<br>$$<br>解密方程为<br>$$<br>c1^{s1}c2^{s2}&#x3D;m^{e1·s1}m^{e2·s2}&#x3D;m^{e1·s1+e2·s2}&#x3D;m^{gcd(e1,e2)} \mod n<br>$$<br>然后在模里开次方</p>
-<h3 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h3><p>（来自NSSCTF工坊等）</p>
-<ol>
-<li><p><a target="_blank" rel="noopener" href="https://www.nssctf.cn/problem/3649">P1[RSA2]P8 | NSSCTF]</a></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line">    </span><br><span class="line">    flag = <span class="string">b&#x27;NSSCTF&#123;******&#125;&#x27;</span></span><br><span class="line">    </span><br><span class="line">    p = getPrime(<span class="number">512</span>)</span><br><span class="line">    q = getPrime(<span class="number">512</span>)</span><br><span class="line">    </span><br><span class="line">    n = p*q</span><br><span class="line">    e1 = getPrime(<span class="number">16</span>)</span><br><span class="line">    e2 = getPrime(<span class="number">16</span>)</span><br><span class="line">    </span><br><span class="line">    m = bytes_to_long(flag)</span><br><span class="line">    </span><br><span class="line">    c1 = <span class="built_in">pow</span>(m, e1, n)</span><br><span class="line">    c2 = <span class="built_in">pow</span>(m, e2, n)</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;n = <span class="subst">&#123;n&#125;</span>&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;e1 = <span class="subst">&#123;e1&#125;</span>&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;e2 = <span class="subst">&#123;e2&#125;</span>&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;c1 = <span class="subst">&#123;c1&#125;</span>&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;c2 = <span class="subst">&#123;c2&#125;</span>&#x27;</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    n = 120294155186626082670474649118722298040433501930335450479777638508444129059776534554344361441717048531505985491664356283524886091709370969857047470362547600390987665105196367975719516115980157839088766927450099353377496192206005171597109864609567336679138620134544004766539483664270351472198486955623315909571</span></span><br><span class="line"><span class="string">    e1 = 38317</span></span><br><span class="line"><span class="string">    e2 = 63409</span></span><br><span class="line"><span class="string">    c1 = 42703138696187395030337205860503270214353151588149506110731264952595193757235229215067638858431493587093612397165407221394174690263691095324298012134779703041752810028935711214038835584823385108771901216441784673199846041109074467177891680923593206326788523158180637665813642688824593788192044139055552031622</span></span><br><span class="line"><span class="string">    c2 = 50460092786111470408945316270086812807230253234809303694007902628924057713984397041141665125615735752600114964852157684904429928771531639899496987905067366415806771003121954852465731110629459725994454904159277228514337278105207721011579794604761255522391446534458815389983562890631994726687526070228315925638</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>exp</li>
-</ul>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line">    <span class="keyword">from</span> gmpy2 <span class="keyword">import</span> *</span><br><span class="line">    <span class="comment"># 已知</span></span><br><span class="line">    n = <span class="number">120294155186626082670474649118722298040433501930335450479777638508444129059776534554344361441717048531505985491664356283524886091709370969857047470362547600390987665105196367975719516115980157839088766927450099353377496192206005171597109864609567336679138620134544004766539483664270351472198486955623315909571</span></span><br><span class="line">    e1 = <span class="number">38317</span></span><br><span class="line">    e2 = <span class="number">63409</span></span><br><span class="line">    c1 = <span class="number">42703138696187395030337205860503270214353151588149506110731264952595193757235229215067638858431493587093612397165407221394174690263691095324298012134779703041752810028935711214038835584823385108771901216441784673199846041109074467177891680923593206326788523158180637665813642688824593788192044139055552031622</span></span><br><span class="line">    c2 = <span class="number">50460092786111470408945316270086812807230253234809303694007902628924057713984397041141665125615735752600114964852157684904429928771531639899496987905067366415806771003121954852465731110629459725994454904159277228514337278105207721011579794604761255522391446534458815389983562890631994726687526070228315925638</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 处理</span></span><br><span class="line">    _, s1, s2 = gcdext(e1, e2)</span><br><span class="line">    </span><br><span class="line">    m = <span class="built_in">pow</span>(c1, s1, n)*<span class="built_in">pow</span>(c2, s2, n) % n  <span class="comment"># 最后别忘记再模上一个n，整体都在模n中</span></span><br><span class="line">    flag = long_to_bytes(m).decode()</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 输出</span></span><br><span class="line">    <span class="built_in">print</span>(flag) <span class="comment"># NSSCTF&#123;same_module_attack!&#125;</span></span><br><span class="line">    </span><br></pre></td></tr></table></figure>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.nssctf.cn/problem/4011">P2[RSA3]P8 | NSSCTF]</a></p>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">p = getPrime(<span class="number">700</span>)</span><br><span class="line">q = getPrime(<span class="number">700</span>)</span><br><span class="line">n = p*q</span><br><span class="line"></span><br><span class="line">e1 = <span class="number">3</span>*getPrime(<span class="number">16</span>)</span><br><span class="line">e2 = <span class="number">3</span>*getPrime(<span class="number">16</span>)</span><br><span class="line"></span><br><span class="line">flag = <span class="string">b&#x27;NSSCTF&#123;******&#125;&#x27;</span></span><br><span class="line">c1 = <span class="built_in">pow</span>(bytes_to_long(flag), e1, n)</span><br><span class="line">c2 = <span class="built_in">pow</span>(bytes_to_long(flag), e2, n)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;n = <span class="subst">&#123;n&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;e1 = <span class="subst">&#123;e1&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;e2 = <span class="subst">&#123;e2&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;c1 = <span class="subst">&#123;c1&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;c2 = <span class="subst">&#123;c2&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">n = 17258060066893213074755453373218306582162826137762311133274776357570753221703880922246758313805944651653670388312409120584883194670296622866672717977722186711567375015117429341498055534372807872455441738225834253639068425012163751145785603722177526607324435641434593514768226599401862097301050185867830575469303960864978407638846270971263106481892520999227504152184478241946941685206875783621912245612463394268401327595737        </span></span><br><span class="line"><span class="string">e1 = 159897</span></span><br><span class="line"><span class="string">e2 = 192273</span></span><br><span class="line"><span class="string">c1 = 4595717262826082372249114022806610849627020753616385658397281529962210282956290111008418210778140550163959636029533312923781864970753502714169965973507425352493857361069899079130259227540344021591878554631845093918021212295485108865566378903346061480239406752062655328184620669486561050933167981474236084817766063901438798437061213111422401822238367462990085699301757131570089105471117732589635966783817714928153442984943        </span></span><br><span class="line"><span class="string">c2 = 6930904879823636264189052321687613173304614320999504775391013591790100775422558030373964338538540537224825701022993433544854997668153296576460906623734663341340853498020227553815076511099480950225109778895193096753014911735040516576988675988526232648772153671745762684830032445024652478629766700037603250123679920127263565322009118867116958069937438887437206234970465675161823446396025302570020058273271974621280101050077</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>exp</li>
-</ul>
- <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> gmpy2 <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="comment"># 已知</span></span><br><span class="line">n = <span class="number">17258060066893213074755453373218306582162826137762311133274776357570753221703880922246758313805944651653670388312409120584883194670296622866672717977722186711567375015117429341498055534372807872455441738225834253639068425012163751145785603722177526607324435641434593514768226599401862097301050185867830575469303960864978407638846270971263106481892520999227504152184478241946941685206875783621912245612463394268401327595737</span></span><br><span class="line">e1 = <span class="number">159897</span></span><br><span class="line">e2 = <span class="number">192273</span></span><br><span class="line">c1 = <span class="number">4595717262826082372249114022806610849627020753616385658397281529962210282956290111008418210778140550163959636029533312923781864970753502714169965973507425352493857361069899079130259227540344021591878554631845093918021212295485108865566378903346061480239406752062655328184620669486561050933167981474236084817766063901438798437061213111422401822238367462990085699301757131570089105471117732589635966783817714928153442984943</span></span><br><span class="line">c2 = <span class="number">6930904879823636264189052321687613173304614320999504775391013591790100775422558030373964338538540537224825701022993433544854997668153296576460906623734663341340853498020227553815076511099480950225109778895193096753014911735040516576988675988526232648772153671745762684830032445024652478629766700037603250123679920127263565322009118867116958069937438887437206234970465675161823446396025302570020058273271974621280101050077</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 处理</span></span><br><span class="line"><span class="comment"># print(gcd(e1, e2))  3</span></span><br><span class="line"></span><br><span class="line">t, s1, s2 = gcdext(e1, e2)</span><br><span class="line"></span><br><span class="line">m = iroot(<span class="built_in">pow</span>(c1, s1, n)*<span class="built_in">pow</span>(c2, s2, n) % n, t)[<span class="number">0</span>]</span><br><span class="line">flag = long_to_bytes(m).decode()</span><br><span class="line"><span class="comment"># 输出</span></span><br><span class="line"><span class="built_in">print</span>(flag)  <span class="comment">#NSSCTF&#123;9f6c0e27-0c56-4612-974f-b781c06663fa&#125;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>P3（占位）</p>
-</li>
-</ol>
-<h3 id="解题板子"><a href="#解题板子" class="headerlink" title="解题板子"></a>解题板子</h3><p>（无论e1与e2是否互素 大都适用）</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">from Crypto.Util.number import *</span><br><span class="line">from gmpy2 import *</span><br><span class="line"></span><br><span class="line"># 已知</span><br><span class="line">n = </span><br><span class="line">e1 = </span><br><span class="line">e2 = </span><br><span class="line">c1 = </span><br><span class="line">c2 = </span><br><span class="line"></span><br><span class="line"># 处理</span><br><span class="line"># print(gcd(e1, e2))  3</span><br><span class="line"></span><br><span class="line">t, s1, s2 = gcdext(e1, e2)</span><br><span class="line"></span><br><span class="line">m = iroot(pow(c1, s1, n)*pow(c2, s2, n) % n, t)[0]</span><br><span class="line">flag = long_to_bytes(m).decode()</span><br><span class="line"># 输出</span><br><span class="line">print(flag)</span><br></pre></td></tr></table></figure>
-
+<p>RSA困难在于n的分解，我之前一直被这个所迷惑（也不是说这句话不对）。n分解p和q是为了求n的欧拉函数phi，从而进行rsa的解密。但如果n是素数呢？</p>
+<p>rsa加密公式<br>$$</p>
+<p>$$<br>解密公式<br>$$</p>
+<p>$$<br>关键在于ed&#x3D;1+k·phi ，有拓展欧拉函数</p>
+<p>$m^{1+k·phi} \mod n&#x3D; m·m^{phi·k} \mod n&#x3D;m·1^k&#x3D;m \mod n$</p>
 
     
 
@@ -352,7 +309,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://saga131.github.io/2024/09/17/%E5%85%B1%E6%A8%A1%E6%94%BB%E5%87%BB/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://saga131.github.io/%E5%85%B3%E4%BA%8ERSA%E7%9A%84%E5%8E%9F%E7%90%86%E6%8E%A2%E7%A9%B6%E5%8F%8A%E5%BB%B6%E7%94%B3.html" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -364,25 +321,6 @@
   </div>
 </article>
 
-
-<nav id="article-nav">
-  
-    <a href="/2024/09/17/%E5%86%99%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%B0%8F%E8%AE%B0%E5%BD%95/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          写博客的小记录
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2024/09/01/coppersmith%E9%93%9C%E5%8C%A0%E5%85%A5%E9%97%A8/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">coppersmith铜匠入门</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
 
 
 <aside class="wrap-side-operation">
@@ -405,7 +343,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B1%E6%A8%A1%E6%94%BB%E5%87%BB"><span class="toc-number">1.</span> <span class="toc-text">共模攻击</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number"></span> <span class="toc-text">知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80-n%E7%9B%B8%E5%90%8C%EF%BC%8C%E5%8A%A0%E5%AF%86%E4%BA%86%E7%9B%B8%E5%90%8C%E7%9A%84m%EF%BC%8C%E7%94%A8%E4%BA%86%E4%B8%A4%E4%B8%AAe%EF%BC%8C%E5%85%AC%E9%92%A5%E4%B8%AD%E7%9A%84e%E4%BA%92%E7%B4%A0%EF%BC%88%E4%B8%A4%E4%B8%AA%E6%95%B0%E6%9C%80%E5%A4%A7%E5%85%AC%E5%9B%A0%E6%95%B0%E4%B8%BA1%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">基础 n相同，加密了相同的m，用了两个e，公钥中的e互素（两个数最大公因数为1）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E9%98%B6%EF%BC%8C%E5%85%AC%E9%92%A5%E7%9A%84e%E5%B9%B6%E4%B8%8D%E4%BA%92%E7%B4%A0"><span class="toc-number">2.</span> <span class="toc-text">进阶，公钥的e并不互素</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98"><span class="toc-number"></span> <span class="toc-text">例题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E9%A2%98%E6%9D%BF%E5%AD%90"><span class="toc-number"></span> <span class="toc-text">解题板子</span></a>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
@@ -453,7 +391,7 @@
 	var yiliaConfig = {
 		mathjax: [object Object],
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
