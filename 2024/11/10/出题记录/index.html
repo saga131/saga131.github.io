@@ -17,13 +17,13 @@
 <meta property="og:site_name" content="saga131密之作坊">
 <meta property="og:description" content="记录这次从9月初到10月末陆陆续续出的几道密码题">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://saga131.github.io/2024/11/10/%E5%87%BA%E9%A2%98%E8%AE%B0%E5%BD%95/image-20241112161725441-1731400247931-4.png">
-<meta property="og:image" content="http://saga131.github.io/2024/11/10/%E5%87%BA%E9%A2%98%E8%AE%B0%E5%BD%95/image-20241112161823426.png">
+<meta property="og:image" content="http://saga131.github.io/2024/11/10/%E5%87%BA%E9%A2%98%E8%AE%B0%E5%BD%95/image1.png">
+<meta property="og:image" content="http://saga131.github.io/2024/11/10/%E5%87%BA%E9%A2%98%E8%AE%B0%E5%BD%95/image2.png">
 <meta property="article:published_time" content="2024-11-10T00:33:14.000Z">
-<meta property="article:modified_time" content="2024-11-12T08:32:46.566Z">
+<meta property="article:modified_time" content="2024-11-12T08:54:45.751Z">
 <meta property="article:author" content="saga131">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://saga131.github.io/2024/11/10/%E5%87%BA%E9%A2%98%E8%AE%B0%E5%BD%95/image-20241112161725441-1731400247931-4.png">
+<meta name="twitter:image" content="http://saga131.github.io/2024/11/10/%E5%87%BA%E9%A2%98%E8%AE%B0%E5%BD%95/image1.png">
   
     <link rel="alternative" href="/atom.xml" title="saga131密之作坊" type="application/atom+xml">
   
@@ -252,7 +252,7 @@
 <ul>
 <li><p>解析</p>
 <p>  结合题目描述，在网上搜索并用 AI 解读描述</p>
-<p>  <img src="image-20241112161725441-1731400247931-4.png" alt="image-20241112161725441"></p>
+<p>  <img src="/2024/11/10/%E5%87%BA%E9%A2%98%E8%AE%B0%E5%BD%95/image1.png" alt="image-20241112161725441"></p>
 <p>  在 Python 中异或先计算两边，再进行异或操作</p>
 </li>
 </ul>
@@ -284,7 +284,7 @@
 <p>计算了m0的md5 <code>hm0</code>，然后将hm0转成整数hm1进行计算</p>
 <script type="math/tex; mode=display">s = hm_1^{d} \mod n</script><p>那么我们有e，理解rsa解密原理 </p>
 <script type="math/tex; mode=display">e·d \equiv 1 \mod phi \\ s^e \equiv (hm_1^{d})^e \equiv hm_1^{d·e} \equiv hm1^{1+k·phi} \equiv hm1 \mod n = hm1</script><p>那么再结合题目名字和描述，去cmd5.com找hm1的结果</p>
-<p><img src="image-20241112161823426.png" alt="image-20241112161823426"></p>
+<p><img src="/2024/11/10/%E5%87%BA%E9%A2%98%E8%AE%B0%E5%BD%95/image2.png" alt="image-20241112161823426"></p>
 <p>m为adm0n12</p>
 <p>flag为</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag = &#x27;flag&#123;th1s_1s_my_k3y:&#x27; + m + &#x27;0x&#x27; + hashlib.sha256(m.encode()).hexdigest() + &#x27;&#125;&#x27;</span><br></pre></td></tr></table></figure>
