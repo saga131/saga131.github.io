@@ -219,7 +219,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">218字</span>
+      <span class="post-count">216字</span>
     </span>
   </span>
 
@@ -241,14 +241,18 @@
     
     <p>记录写博客遇到的小弯路</p>
 <span id="more"></span>
-
 <ul>
 <li><h3 id="已解决"><a href="#已解决" class="headerlink" title="已解决"></a>已解决</h3></li>
 </ul>
 <h4 id="一、公式渲染问题"><a href="#一、公式渲染问题" class="headerlink" title="一、公式渲染问题"></a>一、公式渲染问题</h4><p>按照这篇<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44846324/article/details/114582328">这次彻底解决在Hexo中渲染MathJax数学公式出现的问题！！！_uninstall hexo-renderer-marked失败-CSDN博客</a></p>
-<p>换了渲染器还是有些公式没显示出来，像下面第二个这样<br>$$<br>c1^{s1}<em>c2^{s2}&#x3D;m^{e1</em>s1}<em>m^{e2</em>s2}&#x3D;m^{e1<em>s1+e2</em>s2}&#x3D;m^{1} \mod n<br>$$<br>$a<em>x+b</em>y&#x3D;gcd(a,b)$</p>
-<p>用F12查看源码后，了解到有可能是星号的问题，两个星号一起就是斜体的markdown语法了，冲突了，便把星号删去，问题解决<br>$$<br>ax+by&#x3D;gcd(a,b)<br>$$<br>觉得这样不太好理解，便用<code>·</code>点乘来代表乘号<br>$$<br>a·x+b·y&#x3D;gcd(a,b)<br>$$</p>
-<ul>
+<p>换了渲染器还是有些公式没显示出来，像下面第二个这样</p>
+<script type="math/tex; mode=display">
+c1^{s1}*c2^{s2}=m^{e1*s1}*m^{e2*s2}=m^{e1*s1+e2*s2}=m^{1} \mod n</script><p>$a<em>x+b</em>y=gcd(a,b)$</p>
+<p>用F12查看源码后，了解到有可能是星号的问题，两个星号一起就是斜体的markdown语法了，冲突了，便把星号删去，问题解决</p>
+<script type="math/tex; mode=display">
+ax+by=gcd(a,b)</script><p>觉得这样不太好理解，便用<code>·</code>点乘来代表乘号</p>
+<script type="math/tex; mode=display">
+a·x+b·y=gcd(a,b)</script><ul>
 <li><h3 id="待解决"><a href="#待解决" class="headerlink" title="待解决"></a>待解决</h3></li>
 </ul>
 <h4 id="一、图床"><a href="#一、图床" class="headerlink" title="一、图床"></a>一、图床</h4><p>在gitee搭的图床，但是github博客上显示不出来</p>
