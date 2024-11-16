@@ -17,18 +17,18 @@
 <meta property="og:site_name" content="saga131密之作坊">
 <meta property="og:description" content="冀信杯这次靠队里的bin✌带飞，自己靠运气拿到了两道题misc，另一道misc题是队友出，没有web和密码的比赛。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gitee.com/saga131/mypic/raw/master/img/image-20240827172312668.png">
-<meta property="og:image" content="https://gitee.com/saga131/mypic/raw/master/img/image-20240827172346318.png">
-<meta property="og:image" content="https://gitee.com/saga131/mypic/raw/master/img/image-20240827172507488.png">
-<meta property="og:image" content="https://gitee.com/saga131/mypic/raw/master/img/image-20240827173119612.png">
-<meta property="og:image" content="https://gitee.com/saga131/mypic/raw/master/img/image-20240827202515231.png">
-<meta property="og:image" content="https://gitee.com/saga131/mypic/raw/master/img/image-20240827205454727.png">
-<meta property="og:image" content="https://gitee.com/saga131/mypic/raw/master/img/image-20240827210234412.png">
+<meta property="og:image" content="http://saga131.github.io/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/pic1.png">
+<meta property="og:image" content="http://saga131.github.io/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/pic2.png">
+<meta property="og:image" content="http://saga131.github.io/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/pic3.png">
+<meta property="og:image" content="http://saga131.github.io/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/pic4.png">
+<meta property="og:image" content="http://saga131.github.io/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/pic5.png">
+<meta property="og:image" content="http://saga131.github.io/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/pic6.png">
+<meta property="og:image" content="http://saga131.github.io/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/pic7.png">
 <meta property="article:published_time" content="2024-08-27T13:04:48.000Z">
-<meta property="article:modified_time" content="2024-08-27T13:15:22.272Z">
+<meta property="article:modified_time" content="2024-11-16T01:53:34.423Z">
 <meta property="article:author" content="saga131">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gitee.com/saga131/mypic/raw/master/img/image-20240827172312668.png">
+<meta name="twitter:image" content="http://saga131.github.io/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/pic1.png">
   
     <link rel="alternative" href="/atom.xml" title="saga131密之作坊" type="application/atom+xml">
   
@@ -257,24 +257,24 @@
 </ul>
 <p>一堆二进制</p>
 <p>放到赛博厨子</p>
-<p><img src="https://gitee.com/saga131/mypic/raw/master/img/image-20240827172312668.png" alt="image-20240827172312668"></p>
+<p><img src="/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/pic1.png" alt="image-20240827172312668"></p>
 <p>得到一个文件，解压得到一张图片，放到随波逐流没东西</p>
-<p><img src="https://gitee.com/saga131/mypic/raw/master/img/image-20240827172346318.png" alt="image-20240827172346318"></p>
+<p><img src="/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/pic2.png" alt="image-20240827172346318"></p>
 <p>然后看属性，属性里面有base64编码</p>
-<p><img src="https://gitee.com/saga131/mypic/raw/master/img/image-20240827172507488.png" alt="image-20240827172507488"></p>
+<p><img src="/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/pic3.png" alt="image-20240827172507488"></p>
 <p>解码得flag</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;01a25ea3fd6349c6e635a1d0196e75fb&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="注了什么"><a href="#注了什么" class="headerlink" title="注了什么"></a>注了什么</h3><ul>
 <li>题目</li>
 </ul>
 <p>给了个流量包</p>
-<p><img src="https://gitee.com/saga131/mypic/raw/master/img/image-20240827173119612.png" alt="image-20240827173119612"></p>
+<p><img src="/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/pic4.png" alt="image-20240827173119612"></p>
 <p>按照正常顺序，先ctrl+F5搜索一下flag，搜不到，然后协议分级，流追踪，发现在sql布尔注入（没发现也没关系，浏览会发现变化的数字在ascii码范围内，就会顿悟这是在利用回显不同来爆破正确字符）。</p>
 <p>导出相关流，放在文件夹中方便看</p>
-<p><img src="https://gitee.com/saga131/mypic/raw/master/img/image-20240827202515231.png" alt="image-20240827202515231"></p>
-<p><img src="https://gitee.com/saga131/mypic/raw/master/img/image-20240827205454727.png" alt="image-20240827205454727"></p>
+<p><img src="/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/pic5.png" alt="image-20240827202515231"></p>
+<p><img src="/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/pic6.png" alt="image-20240827205454727"></p>
 <p>直接在导出界面阅读即可（小tip 可以看着下面图红框地方确认回显）</p>
-<p><img src="https://gitee.com/saga131/mypic/raw/master/img/image-20240827210234412.png" alt="image-20240827210234412"></p>
+<p><img src="/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/pic7.png" alt="image-20240827210234412"></p>
 <p>找到和flag相关的文件名后，看每一个变化的数字，转ascii得到flag</p>
 <ul>
 <li>exp</li>
