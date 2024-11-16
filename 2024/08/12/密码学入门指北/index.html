@@ -20,8 +20,8 @@
 <meta property="og:image" content="http://saga131.github.io/2024/08/12/%E5%AF%86%E7%A0%81%E5%AD%A6%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97/pic1.png">
 <meta property="og:image" content="http://saga131.github.io/2024/08/12/%E5%AF%86%E7%A0%81%E5%AD%A6%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97/pic2.png">
 <meta property="article:published_time" content="2024-08-12T05:45:08.000Z">
-<meta property="article:modified_time" content="2024-11-16T02:05:18.189Z">
-<meta property="article:author" content="saga131">
+<meta property="article:modified_time" content="2024-11-16T02:12:58.274Z">
+<meta property="article:author" content="saga131密之作坊">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://saga131.github.io/2024/08/12/%E5%AF%86%E7%A0%81%E5%AD%A6%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97/pic1.png">
   
@@ -71,7 +71,7 @@
 			<img src="/img/head.jpg" class="js-avatar show">
 		</a>
 		<hgroup>
-			<h1 class="header-author"><a href="/">saga131</a></h1>
+			<h1 class="header-author"><a href="/">saga131密之作坊</a></h1>
 		</hgroup>
 		
 		<p class="header-subtitle">crypto&amp;web入门者</p>
@@ -146,7 +146,7 @@
 				</a>
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">saga131</h1>
+			  <h1 class="header-author js-header-author">saga131密之作坊</h1>
 			</hgroup>
 			
 			<p class="header-subtitle"><i class="icon icon-quo-left"></i>crypto&amp;web入门者<i class="icon icon-quo-right"></i></p>
@@ -220,7 +220,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">3k字</span>
+      <span class="post-count">3.1k字</span>
     </span>
   </span>
 
@@ -259,12 +259,12 @@
 <ol>
 <li>配置好python编译器和集成开发环境（<code>pycharm</code>或者<code>vscode</code>），<code>print(&quot;hello python world!&quot;)</code></li>
 <li>理解变量和变量类型，变量类型转换  <code>a = b&#39;65537&#39;  a = int(a)</code></li>
-<li>运算符号，赋值= ， 加减乘除 +-*/ ，整除 // ，比较大小 &lt; &gt; &lt;= &gt;= ，等于==，取模 %</li>
+<li>运算符号，赋值= ， 加减乘除 +-\cdot / ，整除 // ，比较大小 &lt; &gt; &lt;= &gt;= ，等于==，取模 %</li>
 <li>基本语法</li>
 <li>循环语句，布尔类型（真和假，1和0，True和False）</li>
 <li>python列表，数组</li>
 <li>pip install 安装<code>pycyptodome</code>和<code>gmpy2</code>包，模块导入</li>
-<li>函数的使用，<code>pow（a,b,c）</code> 相当于 (a ** b)  %  c</li>
+<li>函数的使用，<code>pow（a,b,c）</code> 相当于 (a **  b)  %  c</li>
 <li>python各种进制的格式头（二进制0b，十六进制0x等等）</li>
 </ol>
 <p>密码学</p>
@@ -308,9 +308,9 @@ m = c^{d} \pmod n</script><p>​    3.e和d的关系式</p>
 <script type="math/tex; mode=display">
 d = e^{-1} \pmod {phi}</script><p>​    4.p和q是素数的情况下，n的欧拉函数phi</p>
 <script type="math/tex; mode=display">
-phi = (p-1)*(q-1)</script><p>​    5.n与p,q的关系式</p>
+phi = (p-1)\cdot (q-1)</script><p>​    5.n与p,q的关系式</p>
 <script type="math/tex; mode=display">
-n = p*q</script><p>​    6.大小关系</p>
+n = p \cdot q</script><p>​    6.大小关系</p>
 <p>​    </p>
 <script type="math/tex; mode=display">
 m < n \\
@@ -323,7 +323,7 @@ n \approx phi</script><figure class="highlight plaintext"><table><tr><td class="
 <p>  <img src="/2024/08/12/%E5%AF%86%E7%A0%81%E5%AD%A6%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97/pic2.png" alt="解密原理"></p>
 <p>  难破解的原理</p>
 <p>  RSA算法开创了现代密码并实现了非对称加密，其中难破解的原理基于大整数分解。</p>
-<p>  计算n = p*q简单，但由n分解出p，q</p>
+<p>  计算n = p\cdot q简单，但由n分解出p，q</p>
 <p>  手算 12 的因子，很快可以列出 [1,2,3,4,6,12]，但一旦上升到很大的整数，例如</p>
   <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">6969872410035233098344189258766624225446081814953480897731644163180991292913719910322241873463164232700368119465476508174863062276659958418657253738005689</span></span><br></pre></td></tr></table></figure>
 <p>  就根本拆不开成两个数字。</p>
@@ -364,15 +364,15 @@ n \approx phi</script><figure class="highlight plaintext"><table><tr><td class="
 <p>  ​    上面公式四个有三个都出现了一个英文单词 mod ，这可不是游戏中打mod的意思 ， 在数学中，这被称为 “模” ，数学符号是这个<code>%</code>，相信大家小时候都学过余，这个就是模。12除5余2的余。接下来讲一种新的观点，12在 $\mod 5$ 的世界中就是2 ，这个世界的数学范围是[ 0 , 5 ) 。</p>
 </li>
 <li><p>模运算</p>
-<p>  ​    模运算和平时的运算基本上没有太大区别，只是在模运算中，我们人为的划定了一个集合[ 0 , n ) ，其中出现的数字都不会超过这个集合。模运算也可以实现等式左右两边交换，例如e和d的关系式也可以写成  $e*d = 1 \pmod n$ 。</p>
+<p>  ​    模运算和平时的运算基本上没有太大区别，只是在模运算中，我们人为的划定了一个集合[ 0 , n ) ，其中出现的数字都不会超过这个集合。模运算也可以实现等式左右两边交换，例如e和d的关系式也可以写成  $e\cdot d = 1 \pmod n$ 。</p>
 <p>  ​    而运算符号加减乘除的除就有些变化了。上面的$e^{-1}$ 可以写成 $\frac {1}{e}$ ，也就是1除于e，但在模运算中不能直接除，</p>
 <p>  例如 $\frac {a+1}{b-1} \pmod n $ 要先求b的逆元 $(b-1)^{-1}$，再将这逆元$(b-1)^{-1}$与$(a+1)$相乘。</p>
 <p>  ​    在上面第三个公式 e和d的关系式中有<script type="math/tex">d^{-1}</script>,这涉及到模运算中求逆元，这点展开会涉及到其他数学知识，这里先放着不谈。只要记住在模运算中，没有除法，只有求逆元然后再相乘。具体的代码实现会在下面讲述。</p>
 </li>
 <li><p>海纳百川的k和无所不能的公因数</p>
 <p>  ​    在上面的取模和模运算中，涉及到大量的<script type="math/tex">\mod n</script> ，如何转化成可以手算推理的东西呢？</p>
-<p>  ​    答：$k<em>n$ 其中k是任意整数，例如  $12 \pmod 5 = 12 - 2</em>5$  其中的2就是k啦。</p>
-<p>  ​    我们之后会遇到一部分的数学推导题，出题人会给出有关p和q的关系式。草稿纸上推理处理完关系式后，经常能得到一个有关p或者q的式子$a = b \pmod p$，此时我们只需要将这个式子转化一下 $a = b+k_1<em>p$ 即  $k_1</em>p = a-b$ 求 <code>a-b</code>  和  <code>n</code> 的公因数就可以得到p了，因为$n = p<em>q$ 也可以看成 $ n = k_2</em>p$，而$k_1$一般不等于$k_2$ 所以就可以得到p。具体情况请见<a target="_blank" rel="noopener" href="https://www.cnblogs.com/Clair-is-com/p/16470121.html">羊城杯 2021Bigrsa</a> 共享素数。</p>
+<p>  ​    答：$k\cdot n$ 其中k是任意整数，例如  $12 \pmod 5 = 12 - 2\cdot 5$  其中的2就是k啦。</p>
+<p>  ​    我们之后会遇到一部分的数学推导题，出题人会给出有关p和q的关系式。草稿纸上推理处理完关系式后，经常能得到一个有关p或者q的式子$a = b \pmod p$，此时我们只需要将这个式子转化一下 $a = b+k_1\cdot p$ 即  $k_1\cdot p = a-b$ 求 <code>a-b</code>  和  <code>n</code> 的公因数就可以得到p了，因为$n = p\cdot q$ 也可以看成 $ n = k_2\cdot p$，而$k_1$一般不等于$k_2$ 所以就可以得到p。具体情况请见<a target="_blank" rel="noopener" href="https://www.cnblogs.com/Clair-is-com/p/16470121.html">羊城杯 2021Bigrsa</a> 共享素数。</p>
 </li>
 </ul>
 </li>
@@ -380,7 +380,7 @@ n \approx phi</script><figure class="highlight plaintext"><table><tr><td class="
 <p>​        </p>
 <ul>
 <li>计算机基础<ul>
-<li>把<code>“我喜欢密码学”</code>转化为<code>整数</code>——<strong>编码</strong></li>
+<li>把<code>“我喜欢密码学”</code>转化为<code>整数</code>——\cdot \cdot 编码\cdot \cdot </li>
 </ul>
 </li>
 </ul>
@@ -390,7 +390,7 @@ n \approx phi</script><figure class="highlight plaintext"><table><tr><td class="
 c = m^{e} \pmod n</script><h5 id="2-代码实现"><a href="#2-代码实现" class="headerlink" title="2.代码实现"></a>2.代码实现</h5><ul>
 <li>加密脚本（不需要掌握熟背，只用知道每一行是什么意思就行）</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入Crypto.Util.number模块中的所有函数</span></span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"><span class="comment"># 导入gmpy2模块，用于高性能的数学运算</span></span><br><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"><span class="comment"># 从秘密模块导入flag，通常这是CTF挑战中的隐藏信息</span></span><br><span class="line"><span class="keyword">from</span> 秘密 <span class="keyword">import</span> flag</span><br><span class="line"></span><br><span class="line"><span class="comment"># 这是给出了flag的样式，并不是真正的flag，但已经提供了一些提示，有些题目会根据flag头来破解</span></span><br><span class="line">flag = <span class="string">b&quot;saga131&#123;******&#125;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成两个256位的质数p和q</span></span><br><span class="line">p = getPrime(<span class="number">256</span>)</span><br><span class="line">q = getPrime(<span class="number">256</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算n，即p和q的乘积，用于RSA算法的模数</span></span><br><span class="line">n = p*q</span><br><span class="line"><span class="comment"># 定义公钥指数e，通常为65537</span></span><br><span class="line">e = <span class="number">65537</span></span><br><span class="line"><span class="comment"># 将flag转换为长整数</span></span><br><span class="line">m = bytes_to_long(flag)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用gmpy2模块的powmod函数进行模幂运算，加密消息得到密文c</span></span><br><span class="line">c = gmpy2.powmod(m, e, n)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印模数n</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;n = <span class="subst">&#123;n&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="comment"># 打印公钥指数e</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;e = <span class="subst">&#123;e&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="comment"># 打印加密后的密文c</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;c = <span class="subst">&#123;c&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="comment"># 打印质数p（通常在CTF中不会直接给出）</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;p = <span class="subst">&#123;p&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="comment"># 打印质数q（通常在CTF中不会直接给出）</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;q = <span class="subst">&#123;q&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string"># 以下是打印的结果，这些值通常在CTF挑战中给出</span></span><br><span class="line"><span class="string">n = 4024941574680124502316363981547051098032677531528457166859670261861728313081282635664023890534034586556845494323497683923813915739234466472396261320600483</span></span><br><span class="line"><span class="string">e = 65537</span></span><br><span class="line"><span class="string">c = 226967182640114431119923862488626190608050511354278604627242247124377735518111678279381846350389469161980779137969837090666693533616114290831130137310320</span></span><br><span class="line"><span class="string">p = 62658315832909660478685872111870233686035497063073558738980225214351386198939</span></span><br><span class="line"><span class="string">q = 64236351092062515945998729497153532140067861836088195242257976217499252460697</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入Crypto.Util.number模块中的所有函数</span></span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line"><span class="comment"># 导入gmpy2模块，用于高性能的数学运算</span></span><br><span class="line"><span class="keyword">import</span> gmpy2</span><br><span class="line"><span class="comment"># 从秘密模块导入flag，通常这是CTF挑战中的隐藏信息</span></span><br><span class="line"><span class="keyword">from</span> 秘密 <span class="keyword">import</span> flag</span><br><span class="line"></span><br><span class="line"><span class="comment"># 这是给出了flag的样式，并不是真正的flag，但已经提供了一些提示，有些题目会根据flag头来破解</span></span><br><span class="line">flag = <span class="string">b&quot;saga131&#123;*****&#125;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成两个256位的质数p和q</span></span><br><span class="line">p = getPrime(<span class="number">256</span>)</span><br><span class="line">q = getPrime(<span class="number">256</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算n，即p和q的乘积，用于RSA算法的模数</span></span><br><span class="line">n = p\cdot q</span><br><span class="line"><span class="comment"># 定义公钥指数e，通常为65537</span></span><br><span class="line">e = <span class="number">65537</span></span><br><span class="line"><span class="comment"># 将flag转换为长整数</span></span><br><span class="line">m = bytes_to_long(flag)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用gmpy2模块的powmod函数进行模幂运算，加密消息得到密文c</span></span><br><span class="line">c = gmpy2.powmod(m, e, n)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印模数n</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;n = <span class="subst">&#123;n&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="comment"># 打印公钥指数e</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;e = <span class="subst">&#123;e&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="comment"># 打印加密后的密文c</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;c = <span class="subst">&#123;c&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="comment"># 打印质数p（通常在CTF中不会直接给出）</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;p = <span class="subst">&#123;p&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="comment"># 打印质数q（通常在CTF中不会直接给出）</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;q = <span class="subst">&#123;q&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string"># 以下是打印的结果，这些值通常在CTF挑战中给出</span></span><br><span class="line"><span class="string">n = 4024941574680124502316363981547051098032677531528457166859670261861728313081282635664023890534034586556845494323497683923813915739234466472396261320600483</span></span><br><span class="line"><span class="string">e = 65537</span></span><br><span class="line"><span class="string">c = 226967182640114431119923862488626190608050511354278604627242247124377735518111678279381846350389469161980779137969837090666693533616114290831130137310320</span></span><br><span class="line"><span class="string">p = 62658315832909660478685872111870233686035497063073558738980225214351386198939</span></span><br><span class="line"><span class="string">q = 64236351092062515945998729497153532140067861836088195242257976217499252460697</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>解密脚本（需要熟练掌握）</li>
 </ul>
@@ -542,7 +542,7 @@ c = m^{e} \pmod n</script><h5 id="2-代码实现"><a href="#2-代码实现" clas
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2024 <a href="http://saga131.github.io/" target="_blank">saga131</a>
+    		&copy; 2024 <a href="http://saga131.github.io/" target="_blank">saga131密之作坊</a>
     	</div>
       	<div class="footer-right">
 			
