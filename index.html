@@ -219,7 +219,41 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    
+    <p>密码中的数学系列——拓展欧几里得算法 </p>
+<p>题外话：前提摘要，“鸽了两个月左右，最近忙于各种比赛的爆零，实力还是太菜了，真的需要沉下心来学习了。先从复现新生赛开始，这篇就是复盘basectf2024得来的笔记”，和前一篇一起记下的笔记</p>
+<blockquote>
+<p>上接<a href="https://saga131.github.io/2024/11/29/欧几里得算法/#more">欧几里得算法</a></p>
+</blockquote>
+<p>现在我们来看一下拓展欧几里得算法</p>
+<p>续上</p>
+<p>有$g=r_n$ ，$r_{n-1}&gt;r_n$</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+r_{n-1}\cdot x_n~~~ +~~~ r_n\cdot y_n~~~~&=\gcd(r_{n-2},r_{n-1})\\
+r_{n-2}\cdot x_{n-1} + r_{n-1}\cdot y_{n-1}&=\gcd(r_{n-3},r_{n-2})\\
+\end{align*}</script><p>且$r_{i+2}$%$r_{i+1}=r_i$</p>
+<p>$\Bigg\lceil{r_{n-1}=r_{n-3}\%r_{n-2}}\\r_{n-2}=r_{n-4}\%r_{n-3}$</p>
+<p>则有</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+g &=\gcd(r_{n-2},r_{n-1})\\
+&= r_{n-1}\cdot x_n+r_n\cdot y_n \\
+&=r_{n-1}\cdot x_n+(r_{n-2}\%r_{n-1})\cdot y_n \\
+&=r_{n-1}\cdot x_n+[r_{n-2}-(r_{n-2}/r_{n-1})\cdot r_{n-1}]\cdot y_n \\
+&=r_{n-1}\cdot x_n+r_{n-2}\cdot y_n-(r_{n-2}/r_{n-1})\cdot r_{n-1}\cdot y_n \\
+&=r_{n-2}\cdot y_n+r_{n-1}\cdot [x_n-(r_{n-2}/r_{n-1})\cdot y_n ]
+\end{align*}</script><p>且有</p>
+<script type="math/tex; mode=display">
+g=\gcd(r_{n-3},r_{n-2})=r_{n-2}\cdot x_{n-1}+r_{n-1}\cdot  y_{n-1}</script><p>则</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+x_{n-1}&=y_n\\
+y_{n-1}&=x_n-(r_{n-2}/r_{n-1})\cdot y_n
+\end{align*}</script><p>代码实现为</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">exgcd</span>(<span class="params">a, b</span>):</span><br><span class="line">    <span class="keyword">if</span> b == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> a, <span class="number">1</span>, <span class="number">0</span></span><br><span class="line">    g, x, y = exgcd(b, a%b)</span><br><span class="line">    <span class="keyword">return</span> g, y, x - (a//b)*y</span><br></pre></td></tr></table></figure>
+<p>（代码来自<a target="_blank" rel="noopener" href="https://www.nssctf.cn/problem/sheet/10095">Crypto系列——RSA（三） | NSSCTF</a>）</p>
+<p><img src="/2024/11/29/%E6%8B%93%E5%B1%95%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95/40c9a8e3756091d0c368dd7ff055c55f.jpg" alt="40c9a8e3756091d0c368dd7ff055c55f"></p>
+
     
 
     
