@@ -10,16 +10,16 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="密码中的数学系列——拓展欧几里得算法  题外话：前提摘要，“鸽了两个月左右，最近忙于各种比赛的爆零，实力还是太菜了，真的需要沉下心来学习了。先从复现新生赛开始，这篇就是复盘basectf2024得来的笔记”，和前一篇一起记下的笔记  上接欧几里得算法  现在我们来看一下拓展欧几里得算法 续上 有$g&#x3D;r_n$ ，$r_{n-1}&gt;r_n$  \begin{align*} r_{n-1}\cd">
+  <meta name="description" content="密码中的数学系列——拓展欧几里得算法  题外话：前提摘要，“鸽了两个月左右，最近忙于各种比赛的爆零，实力还是太菜了，真的需要沉下心来学习了。先从复现新生赛开始，这篇就是复盘basectf2024得来的笔记”，和前一篇一起记下的笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="拓展欧几里得算法">
 <meta property="og:url" content="http://saga131.github.io/2024/11/29/%E6%8B%93%E5%B1%95%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="saga131密之作坊">
-<meta property="og:description" content="密码中的数学系列——拓展欧几里得算法  题外话：前提摘要，“鸽了两个月左右，最近忙于各种比赛的爆零，实力还是太菜了，真的需要沉下心来学习了。先从复现新生赛开始，这篇就是复盘basectf2024得来的笔记”，和前一篇一起记下的笔记  上接欧几里得算法  现在我们来看一下拓展欧几里得算法 续上 有$g&#x3D;r_n$ ，$r_{n-1}&gt;r_n$  \begin{align*} r_{n-1}\cd">
+<meta property="og:description" content="密码中的数学系列——拓展欧几里得算法  题外话：前提摘要，“鸽了两个月左右，最近忙于各种比赛的爆零，实力还是太菜了，真的需要沉下心来学习了。先从复现新生赛开始，这篇就是复盘basectf2024得来的笔记”，和前一篇一起记下的笔记">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://saga131.github.io/2024/11/29/%E6%8B%93%E5%B1%95%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95/40c9a8e3756091d0c368dd7ff055c55f.jpg">
 <meta property="article:published_time" content="2024-11-29T13:18:33.000Z">
-<meta property="article:modified_time" content="2024-11-29T13:42:48.630Z">
+<meta property="article:modified_time" content="2024-11-29T13:45:35.784Z">
 <meta property="article:author" content="saga131密之作坊">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://saga131.github.io/2024/11/29/%E6%8B%93%E5%B1%95%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95/40c9a8e3756091d0c368dd7ff055c55f.jpg">
@@ -239,6 +239,7 @@
     
     <p>密码中的数学系列——拓展欧几里得算法 </p>
 <p>题外话：前提摘要，“鸽了两个月左右，最近忙于各种比赛的爆零，实力还是太菜了，真的需要沉下心来学习了。先从复现新生赛开始，这篇就是复盘basectf2024得来的笔记”，和前一篇一起记下的笔记</p>
+<span id="more"></span>
 <blockquote>
 <p>上接<a href="https://saga131.github.io/2024/11/29/欧几里得算法/#more">欧几里得算法</a></p>
 </blockquote>
