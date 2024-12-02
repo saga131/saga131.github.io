@@ -6,21 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://saga131.github.io">
-  <title>saga131密之作坊</title>
+  <title>MD5长度拓展攻击 | saga131密之作坊</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <!-- <meta name="keywords" content="">
-    <meta name="description" content=""> -->
-  
-  <meta property="og:type" content="website">
-<meta property="og:title" content="saga131密之作坊">
-<meta property="og:url" content="http://saga131.github.io/page/2/index.html">
+  <meta name="description" content="密码知识——MD5长度拓展攻击">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MD5长度拓展攻击">
+<meta property="og:url" content="http://saga131.github.io/2024/12/02/MD5%E9%95%BF%E5%BA%A6%E6%8B%93%E5%B1%95%E6%94%BB%E5%87%BB/index.html">
 <meta property="og:site_name" content="saga131密之作坊">
+<meta property="og:description" content="密码知识——MD5长度拓展攻击">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://saga131.github.io/2024/12/02/MD5%E9%95%BF%E5%BA%A6%E6%8B%93%E5%B1%95%E6%94%BB%E5%87%BB/1095571-20200907021934829-2120181102-1733098841355-3-1733102876826-11.png">
+<meta property="og:image" content="http://saga131.github.io/2024/12/02/MD5%E9%95%BF%E5%BA%A6%E6%8B%93%E5%B1%95%E6%94%BB%E5%87%BB/image-20241201110007672-1733102876826-12.png">
+<meta property="og:image" content="http://saga131.github.io/2024/12/02/MD5%E9%95%BF%E5%BA%A6%E6%8B%93%E5%B1%95%E6%94%BB%E5%87%BB/image-20241201110502100-1733102876827-13.png">
+<meta property="og:image" content="http://saga131.github.io/2024/12/02/MD5%E9%95%BF%E5%BA%A6%E6%8B%93%E5%B1%95%E6%94%BB%E5%87%BB/image-20241201111244712-1733102876827-14.png">
+<meta property="og:image" content="http://saga131.github.io/2024/12/02/MD5%E9%95%BF%E5%BA%A6%E6%8B%93%E5%B1%95%E6%94%BB%E5%87%BB/image-20241202082639456-1733102876827-15.png">
+<meta property="og:image" content="http://saga131.github.io/2024/12/02/MD5%E9%95%BF%E5%BA%A6%E6%8B%93%E5%B1%95%E6%94%BB%E5%87%BB/image-20241202090628260-1733102876827-16.png">
+<meta property="og:image" content="http://saga131.github.io/2024/12/02/MD5%E9%95%BF%E5%BA%A6%E6%8B%93%E5%B1%95%E6%94%BB%E5%87%BB/%E8%BF%99%E5%B0%B1%E6%98%AFmd5%E6%8B%93%E5%B1%95%E6%94%BB%E5%87%BB-1733102876827-17.png">
+<meta property="og:image" content="http://saga131.github.io/2024/12/02/MD5%E9%95%BF%E5%BA%A6%E6%8B%93%E5%B1%95%E6%94%BB%E5%87%BB/image-20241202091309707-1733102876827-18.png">
+<meta property="article:published_time" content="2024-12-02T01:30:00.000Z">
+<meta property="article:modified_time" content="2024-12-02T01:39:12.364Z">
 <meta property="article:author" content="saga131密之作坊">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://saga131.github.io/2024/12/02/MD5%E9%95%BF%E5%BA%A6%E6%8B%93%E5%B1%95%E6%94%BB%E5%87%BB/1095571-20200907021934829-2120181102-1733098841355-3-1733102876826-11.png">
   
     <link rel="alternative" href="/atom.xml" title="saga131密之作坊" type="application/atom+xml">
   
@@ -183,42 +192,111 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-  
-    <article id="post-冀信杯2024" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-MD5长度拓展攻击" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/" target="_blank">冀信杯2024</a>
-  
+    <h1 class="article-title" itemprop="name">
+      MD5长度拓展攻击
     </h1>
   
 
 
   
   
-<a href="/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/" class="archive-article-date">
-        <time datetime="2024-08-27T13:04:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-27</time>
+<a href="/2024/12/02/MD5%E9%95%BF%E5%BA%A6%E6%8B%93%E5%B1%95%E6%94%BB%E5%87%BB/" class="archive-article-date">
+        <time datetime="2024-12-02T01:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-12-02</time>
 </a>
 
   
   
     
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">894字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">3分</span>
+    </span>
+  </span>
+</div>
+
 
   
   </header>
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="冀信杯"><a href="#冀信杯" class="headerlink" title="冀信杯"></a>冀信杯</h1><p>这次靠队里的bin✌带飞，自己靠运气拿到了两道题misc，另一道misc题是队友出，没有web和密码的比赛。</p>
-    
-    <a class="article-more-a" href="/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/#more">more >></a>
-    
+    <p>密码知识——MD5长度拓展攻击</p>
+<span id="more"></span>
+<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><p>参考<a target="_blank" rel="noopener" href="https://wiki.wgpsec.org/knowledge/ctf/Hash-Leng-Extension.html">【CRYPTO】哈希长度拓展攻击 | 狼组安全团队公开知识库 (wgpsec.org)</a></p>
+<h3 id="填充方法"><a href="#填充方法" class="headerlink" title="填充方法"></a>填充方法</h3><p>（补足长度成一个分组，方便hash）</p>
+<p><img src="/2024/12/02/MD5%E9%95%BF%E5%BA%A6%E6%8B%93%E5%B1%95%E6%94%BB%E5%87%BB/1095571-20200907021934829-2120181102-1733098841355-3-1733102876826-11.png" alt></p>
+<p>图片摘自：<a target="_blank" rel="noopener" href="https://xz.aliyun.com/t/2563">哈希长度拓展攻击(Hash Length Extension Attacks)</a></p>
+<blockquote>
+<p>当hash函数拿到需要被hash的字符串后，先将其字节长度对64取模。如果余数正好等于56，那么就在该字符串最后添加上8个字节的长度描述符（具体用bit表示）。如果不等于56，就先对字符串进行长度填充，填充时规定第一个字节为hex(80)，其余字节均用hex(00)填充，填充至余数为56以后，增加8个字节的长度描述符（该长度描述符为需要被hash的字符串的长度，不是填充之后整个字符串的长度）。</p>
+</blockquote>
+<p>若余数超过56，那么还得再用填充字符\x80\x00……来填充成新的一块，到下一块的第56位停止到加上明文长度的十六进制表达</p>
+<h3 id="长度描述符的填入方式"><a href="#长度描述符的填入方式" class="headerlink" title="长度描述符的填入方式"></a>长度描述符的填入方式</h3><blockquote>
+<p>注意MD5运算的时候是小端序存储，假设我们最后8个字节的值为0000001234567890那么存储在MD5运算时的存储方式为9078563412000000，每两个字节构成一个十六进制并且按照逆序的顺序存储。</p>
+</blockquote>
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><p>计算<code>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbb</code>60个a和3个b</p>
+<ul>
+<li>转一下hex</li>
+</ul>
+<p><img src="/2024/12/02/MD5%E9%95%BF%E5%BA%A6%E6%8B%93%E5%B1%95%E6%94%BB%E5%87%BB/image-20241201110007672-1733102876826-12.png" alt="image-20241201110007672"></p>
+<ul>
+<li>填充</li>
+</ul>
+<p>那么填充后是下图，填充了57（即64*2-63-8）个填充符（一个<code>\x80</code>和56个<code>\x00</code>）</p>
+<p><img src="/2024/12/02/MD5%E9%95%BF%E5%BA%A6%E6%8B%93%E5%B1%95%E6%94%BB%E5%87%BB/image-20241201110502100-1733102876827-13.png" alt="image-20241201110502100"></p>
+<ul>
+<li>加上长度描述符（8位十六进制）</li>
+</ul>
+<p>63的十六进制是\x3f，采用小端序存储</p>
+<p><img src="/2024/12/02/MD5%E9%95%BF%E5%BA%A6%E6%8B%93%E5%B1%95%E6%94%BB%E5%87%BB/image-20241201111244712-1733102876827-14.png" alt="image-20241201111244712"></p>
+<p><img src="/2024/12/02/MD5%E9%95%BF%E5%BA%A6%E6%8B%93%E5%B1%95%E6%94%BB%E5%87%BB/image-20241202082639456-1733102876827-15.png" alt="image-20241202082639456"></p>
+<h2 id="md5函数的简略计算过程"><a href="#md5函数的简略计算过程" class="headerlink" title="md5函数的简略计算过程"></a>md5函数的简略计算过程</h2><p>参考<a target="_blank" rel="noopener" href="https://www.cnblogs.com/yunen/p/13624595.html">浅谈HASH长度拓展攻击 - Yunen的博客 - 博客园 (cnblogs.com)</a></p>
+<h3 id="VI向量"><a href="#VI向量" class="headerlink" title="VI向量"></a>VI向量</h3><p>一开始有个初始VI</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A=0x67452301</span><br><span class="line">B=0xefcdab89</span><br><span class="line">C=0x98badcfe</span><br><span class="line">D=0x10325476</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这串初始向量的值是固定的，作为与第一块数据运算的原始向量。</p>
+<p>当这串向量与第一块数据块运算之后，得到了一串新的向量值，这串新的向量值接着与第二块数据块参加运算，直到最后一块数据块。</p>
+</blockquote>
+<p><img src="/2024/12/02/MD5%E9%95%BF%E5%BA%A6%E6%8B%93%E5%B1%95%E6%94%BB%E5%87%BB/image-20241202090628260-1733102876827-16.png" alt="image-20241202090628260"></p>
+<h3 id="VI与md5值相转换的过程"><a href="#VI与md5值相转换的过程" class="headerlink" title="VI与md5值相转换的过程"></a>VI与md5值相转换的过程</h3><p>“ “ “ 而最后的MD5值就是这最后的向量串经过如下转换的结果。</p>
+<p>如向量串：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A=0xab45bc01</span><br><span class="line">B=0x6a64bb53</span><br><span class="line">C=0x23ba8afe</span><br><span class="line">D=0x46847a62</span><br></pre></td></tr></table></figure>
+<p>先两两为一组进行组合，得到如下数据：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ab 45 bc 01</span><br><span class="line">6a 64 bb 53</span><br><span class="line">23 ba 8a fe</span><br><span class="line">46 84 7a 62</span><br></pre></td></tr></table></figure>
+<p>再进行高低位互换，得到如下数据：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">01 bc 45 ab</span><br><span class="line">53 bb 64 6a</span><br><span class="line">fe 8a ba 23</span><br><span class="line">62 7a 84 46</span><br></pre></td></tr></table></figure>
+<p>最终拼接得到MD5值：<code>01bc45ab53bb646afe8aba23627a8446</code>。 ” ” ”</p>
+<p><strong>那么MD5值也可以逆推到VI。</strong></p>
+<h2 id="攻击方法"><a href="#攻击方法" class="headerlink" title="攻击方法"></a>攻击方法</h2><p>已知前几块的md5，那么我们可以利用这个md5构造一个新的初始VI，然后与我们构造的“填充字块”+任意字符  去计算md5</p>
+<p>当然还要跳过省略前面的分组</p>
+<h3 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h3><p>还是上面那个，我们现在只知道有63个字符，那么已经超过了一个块，那么我们自己帮它填充并加上长度描述符，再在后面添加任意字符，使得这个任意字符单独在一个新的分组中，不干扰前面的MD5计算。</p>
+<blockquote>
+<p>但这里还是有个问题（我也不太清楚）：md5函数能自己识别我填充的字符和长度描述符吗？它会不会把我自己加的这些也当成了前面的明文来计算一个新的md5吗。</p>
+</blockquote>
+<p><img src="/2024/12/02/MD5%E9%95%BF%E5%BA%A6%E6%8B%93%E5%B1%95%E6%94%BB%E5%87%BB/这就是md5拓展攻击-1733102876827-17.png" alt="这就是md5拓展攻击"></p>
+<h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><p><img src="/2024/12/02/MD5%E9%95%BF%E5%BA%A6%E6%8B%93%E5%B1%95%E6%94%BB%E5%87%BB/image-20241202091309707-1733102876827-18.png" alt="image-20241202091309707"></p>
+<h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><p><a target="_blank" rel="noopener" href="https://gz.imxbt.cn/games/13/challenges">BaseCTF2024新生赛 【extendmd5】</a></p>
+<p>笔者解析待续</p>
+
     
 
     
@@ -232,16 +310,24 @@
     
 
     
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2024/08/27/%E5%86%80%E4%BF%A1%E6%9D%AF2024/">展开全文 >></a>
-    </p>
-    
 
     
     <div class="clearfix"></div>
   </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2024/12/01/%E8%BF%9E%E5%88%86%E6%95%B0%E5%AE%9A%E7%90%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">连分数定理</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -256,174 +342,54 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-密码学入门指北" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2024/08/12/%E5%AF%86%E7%A0%81%E5%AD%A6%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97/" target="_blank">密码学入门指北</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2024/08/12/%E5%AF%86%E7%A0%81%E5%AD%A6%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97/" class="archive-article-date">
-        <time datetime="2024-08-12T05:45:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-12</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>​    该本为密码学入门手册，简要介绍了密码学的概念、学习密码学的意义、所需工具及学习路线。重点讲解了RSA公钥加密算法的基本原理和数学基础，并提供了Python代码实现示例。</p>
-<p>​    </p>
-    
-    <a class="article-more-a" href="/2024/08/12/%E5%AF%86%E7%A0%81%E5%AD%A6%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2024/08/12/%E5%AF%86%E7%A0%81%E5%AD%A6%E5%85%A5%E9%97%A8%E6%8C%87%E5%8C%97/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">1.</span> <span class="toc-text">知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A1%AB%E5%85%85%E6%96%B9%E6%B3%95"><span class="toc-number">1.1.</span> <span class="toc-text">填充方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%95%BF%E5%BA%A6%E6%8F%8F%E8%BF%B0%E7%AC%A6%E7%9A%84%E5%A1%AB%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="toc-number">1.2.</span> <span class="toc-text">长度描述符的填入方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-number">1.3.</span> <span class="toc-text">例子</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#md5%E5%87%BD%E6%95%B0%E7%9A%84%E7%AE%80%E7%95%A5%E8%AE%A1%E7%AE%97%E8%BF%87%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">md5函数的简略计算过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#VI%E5%90%91%E9%87%8F"><span class="toc-number">2.1.</span> <span class="toc-text">VI向量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#VI%E4%B8%8Emd5%E5%80%BC%E7%9B%B8%E8%BD%AC%E6%8D%A2%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="toc-number">2.2.</span> <span class="toc-text">VI与md5值相转换的过程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E6%96%B9%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">攻击方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90-1"><span class="toc-number">3.1.</span> <span class="toc-text">例子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="toc-number">3.2.</span> <span class="toc-text">流程图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98"><span class="toc-number">4.</span> <span class="toc-text">例题</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
 
-  
-    <article id="post-first-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2024/08/01/first-blog/" target="_blank">first-blog</a>
-  
-    </h1>
-  
 
 
-  
-  
-<a href="/2024/08/01/first-blog/" class="archive-article-date">
-        <time datetime="2024-08-01T11:44:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-08-01</time>
-</a>
 
-  
-  
-    
+<section id="comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname =
+    'true'; // required: replace example with your forum shortname
 
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>各位师傅好，这里是saga131的博客</p>
-<p>第一个博客先来介绍一下自己(落款于9月1号)</p>
-    
-    <a class="article-more-a" href="/2024/08/01/first-blog/#more">more >></a>
-    
-    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
 
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2024/08/01/first-blog/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by
+      Disqus.</a></noscript>
+</section>
 
 
 
 
-  
-  
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
-  
+
+
 
 
           </div>
@@ -451,8 +417,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: [object Object],
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
