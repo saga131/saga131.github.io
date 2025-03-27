@@ -10,16 +10,18 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="感觉有趣，便记录下来，应该会逐步更新，先写一个getflag2先，后续考虑录一个视频讲解，但也是后话。">
+  <meta name="description" content="感觉有趣，便记录下来，应该会逐步更新，先写一个getflag2先（3月27已更新完），后续考虑录一个视频讲解，但也是后话。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Polarctf——RSA1-2逐步解析">
 <meta property="og:url" content="http://saga131.github.io/2025/03/25/Polarctf%E2%80%94%E2%80%94RSA1-2%E9%80%90%E6%AD%A5%E8%A7%A3%E6%9E%90/index.html">
 <meta property="og:site_name" content="saga131密之作坊">
-<meta property="og:description" content="感觉有趣，便记录下来，应该会逐步更新，先写一个getflag2先，后续考虑录一个视频讲解，但也是后话。">
+<meta property="og:description" content="感觉有趣，便记录下来，应该会逐步更新，先写一个getflag2先（3月27已更新完），后续考虑录一个视频讲解，但也是后话。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://saga131.github.io/2025/03/25/Polarctf%E2%80%94%E2%80%94RSA1-2%E9%80%90%E6%AD%A5%E8%A7%A3%E6%9E%90/image-20250325203443404.png">
+<meta property="og:image" content="http://saga131.github.io/2025/03/25/Polarctf%E2%80%94%E2%80%94RSA1-2%E9%80%90%E6%AD%A5%E8%A7%A3%E6%9E%90/image-20250326202258301.png">
+<meta property="og:image" content="http://saga131.github.io/2025/03/25/Polarctf%E2%80%94%E2%80%94RSA1-2%E9%80%90%E6%AD%A5%E8%A7%A3%E6%9E%90/image-20250327203404616.png">
 <meta property="article:published_time" content="2025-03-25T13:12:10.000Z">
-<meta property="article:modified_time" content="2025-03-25T13:14:32.269Z">
+<meta property="article:modified_time" content="2025-03-27T12:42:22.898Z">
 <meta property="article:author" content="saga131密之作坊">
 <meta property="article:tag" content="复盘">
 <meta name="twitter:card" content="summary">
@@ -214,7 +216,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">488字</span>
+      <span class="post-count">1.2k字</span>
     </span>
   </span>
 
@@ -223,7 +225,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">2分</span>
+      <span class="post-count">5分</span>
     </span>
   </span>
 </div>
@@ -234,9 +236,9 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>感觉有趣，便记录下来，应该会逐步更新，先写一个getflag2先，后续考虑录一个视频讲解，但也是后话。</p>
+    <p>感觉有趣，便记录下来，应该会逐步更新，先写一个getflag2先（3月27已更新完），后续考虑录一个视频讲解，但也是后话。</p>
 <span id="more"></span>
-<p>题目代码块</p>
+<h3 id="getflag2"><a href="#getflag2" class="headerlink" title="getflag2"></a>getflag2</h3><p>题目代码块</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">getflag2</span>(<span class="params">m</span>):</span><br><span class="line">    result = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>):</span><br><span class="line">        result.append(getPrime(bits))</span><br><span class="line">    p, q = result</span><br><span class="line">    n = p * q</span><br><span class="line">    hint1 = <span class="built_in">pow</span>(m, p, n)</span><br><span class="line">    hint2 = <span class="built_in">pow</span>(m, q, n)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;---------- getflag 2 ----------&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;hint1 = &#125;</span>&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;hint2 = &#125;</span>&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;n = &#125;</span>&#x27;</span>)</span><br></pre></td></tr></table></figure>
 <p>官方给出的WP</p>
 <p><img src="/2025/03/25/Polarctf%E2%80%94%E2%80%94RSA1-2%E9%80%90%E6%AD%A5%E8%A7%A3%E6%9E%90/image-20250325203443404.png" alt="image-20250325203443404"></p>
@@ -244,8 +246,8 @@
 <p>首先说一下用到的数学原理——费马小定理或者欧拉定理，以及中国剩余定理的思路。</p>
 <p>已知</p>
 <script type="math/tex; mode=display">
-hint1\equiv m^{p} \mod n……①\\
-hint2 \equiv m^{q} \mod n……②\\
+hint1\equiv m^{p}\mod n……①\\
+hint2 \equiv m^{q}\mod n……②\\
 n,e,c具体值</script><p>接下来我们分析一下由哪些地方可以让我们获得到p或者q（rsa大部分解法）</p>
 <ol>
 <li>先入为主的肯定是m头上那诱惑的p，导致主播想用离散对数来求解，冷静下来的主播想起p的位数是512位，此方案不通。</li>
@@ -254,15 +256,15 @@ n,e,c具体值</script><p>接下来我们分析一下由哪些地方可以让我
 <p>由①式得</p>
 <script type="math/tex; mode=display">
 \begin{align*}
-hint1 &= m^{p} + k\cdot n ~~~~将n分解,并两边同时模上p\\ 
-&\equiv m^{p} + k\cdot p\cdot q \mod p\\
-&\equiv m \mod p\\
+hint1 &= m^{p} + k\cdot n ~~~~\#将n分解,并两边同时模上p\\ 
+&\equiv m^{p} + k\cdot p\cdot q\mod p\\
+&\equiv m\mod p\\
 &=m + k\cdot p
 
 \end{align*}</script><p>怎么让这个结果与②式有联系呢，我们观察①②差别，幂不同，一个是p，一个是q，那么n可以联系两个式子。</p>
 <script type="math/tex; mode=display">
 \begin{align*}
-hint1^{n} &\equiv m^{p\cdot p\cdot q} \mod p ~~~由模的性质可以得出\\
+hint1^{n} &\equiv m^{p\cdot p\cdot q} \mod p ~~~\#由模的性质可以得出\\
 &\equiv ((m^{p}~~\% p~)^p~~~\% p ~)^q \mod p
 \end{align*}</script><p>而$m^{p}~~\% p = m$，套两层p，得出的结果也是m</p>
 <p>得出</p>
@@ -276,7 +278,83 @@ hint1^{n}&\equiv m^q \mod p\\
 hint1^{n}&=m^q +k_1\cdot p……③\\
 hint2 &\equiv m^{q} +k_2\cdot p……④
 \end{align*}</script><p>③-④得$k\cdot p$，与n求最大公因数，即可得到p。</p>
-
+<h3 id="getflag1"><a href="#getflag1" class="headerlink" title="getflag1"></a>getflag1</h3><p>题目代码块</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">getflag1</span>(<span class="params">m</span>):</span><br><span class="line">    result = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>):</span><br><span class="line">        result.append(getPrime(bits))</span><br><span class="line">    p, q = result</span><br><span class="line">    <span class="keyword">if</span> p &lt;= q:</span><br><span class="line">        p, q = q, p</span><br><span class="line">    e = <span class="number">0x10001</span></span><br><span class="line">    n = p * q</span><br><span class="line">    c = <span class="built_in">pow</span>(m, e, n)</span><br><span class="line">    hint = <span class="built_in">pow</span>(<span class="number">2024</span> * p + <span class="number">2025</span>, q, n)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;---------- getflag 1 ----------&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;c = &#125;</span>&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;n = &#125;</span>&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;hint = &#125;</span>&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>官方解法</p>
+<p><img src="/2025/03/25/Polarctf%E2%80%94%E2%80%94RSA1-2%E9%80%90%E6%AD%A5%E8%A7%A3%E6%9E%90/image-20250326202258301.png" alt="image-20250326202258301"></p>
+<p>分析</p>
+<p>已有</p>
+<script type="math/tex; mode=display">
+hint \equiv (2024\cdot p+2025)^q \mod n\\
+n,e,c具体值</script><p>见到括号，先拆括号</p>
+<script type="math/tex; mode=display">
+hint = C_q^0\cdot(2024\cdot p)^q+C_q^1\cdot(2024\cdot p)^{q-1}\cdot 2025+......+C_q^{q-1}\cdot (2024\cdot p)^1\cdot 2025^{q-1}+C_q^q\cdot 2025^q+k\cdot p\cdot q</script><p>观察一下，我们可以从哪里获取到p或者q</p>
+<ol>
+<li>多项式系数中含有q</li>
+<li>$2024\cdot p$</li>
+<li>2025的幂q</li>
+<li>$k\cdot p\cdot q$中</li>
+</ol>
+<p>多项式系数：注意最后倒数第二项，会生成一个n出来，$2024\cdot n\cdot 2025^{q-1}$，但这个对这题没有帮助</p>
+<p>$2024\cdot p$太多了。</p>
+<p>2025降幂太大了。</p>
+<p>这个式子太多p了，让我们简化一下，将单个p提取出来，得到</p>
+<script type="math/tex; mode=display">
+hint = 2025^q +k\cdot p ……①</script><p>也可以理解成先取模p，然后再展开</p>
+<script type="math/tex; mode=display">
+\begin{align}
+hint &\equiv 2025^q \mod p\\
+hint &= 2025^q+k\cdot p
+\end{align}</script><p>那么我们现在要剔除$2025^q$，用费马小定理构造一个</p>
+<script type="math/tex; mode=display">
+\begin{align}
+2025^n&\equiv 2025^{p\cdot q} \mod n\\
+\#将模数降为p\\
+2025^n&\equiv 2025^{p\cdot q} \mod p\\ 
+&\equiv (2025^p ~~~\%p)^q \mod p ~~~~~\#费马小定理\\
+&\equiv2025^q \mod p
+\end{align}</script><p>即$2025^n=2025^q+k\cdot p$</p>
+<p>整体是在n下运行的，那么我们再模上n来加快计算速度</p>
+<p>最终我们运用的算式为</p>
+<script type="math/tex; mode=display">
+2025^n\equiv2025^q+k\cdot p \mod n ……②</script><p>综上</p>
+<script type="math/tex; mode=display">
+hint = 2025^q +k\cdot p ……①\\
+2025^n\equiv2025^q+k\cdot p \mod n ……②</script><p>①-②得</p>
+<script type="math/tex; mode=display">
+\begin{align}
+hint-2025^n&\equiv (k_1-k_2)\cdot p \mod n\\
+&=(k_1-k_2)\cdot p + k_3\cdot p\cdot q\\
+&=K\cdot p 
+\end{align}</script><p>其中$K=k_1-k_2+k_3\cdot q$ </p>
+<p>求$K\cdot p$与$n$最大公因数即可得到p</p>
+<h3 id="getflag3"><a href="#getflag3" class="headerlink" title="getflag3"></a>getflag3</h3><p>题目代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">getflag3</span>(<span class="params">m</span>):</span><br><span class="line">    result = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>):</span><br><span class="line">        result.append(getPrime(bits))</span><br><span class="line">    p, q = result</span><br><span class="line">    e = <span class="number">0x10001</span></span><br><span class="line">    n = p * q</span><br><span class="line">    g = <span class="number">20242025</span></span><br><span class="line">    hint = <span class="built_in">pow</span>(g + p * <span class="number">1111</span>, e, n)</span><br><span class="line">    c = <span class="built_in">pow</span>(m, e, n)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;---------- getflag 3 ----------&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;c = &#125;</span>&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;n = &#125;</span>&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;hint = &#125;</span>&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>官方解法</p>
+<p><img src="/2025/03/25/Polarctf%E2%80%94%E2%80%94RSA1-2%E9%80%90%E6%AD%A5%E8%A7%A3%E6%9E%90/image-20250327203404616.png" alt="image-20250327203404616"></p>
+<p>分析</p>
+<p>已知</p>
+<script type="math/tex; mode=display">
+hint = (20242025+p\cdot1111)^e \mod n\\
+已知n,e,c</script><p>拆开括号</p>
+<script type="math/tex; mode=display">
+hint = C_e^0\cdot(20242025)^e+C_e^1\cdot(20242025)^{e-1}\cdot (p\cdot 1111)+......+C_e^{e-1}\cdot (20242025)^1\cdot (p\cdot 1111)^{e-1}+C_e^e\cdot (p\cdot1111)^q+k\cdot p\cdot q</script><p>化简一下p的系数</p>
+<script type="math/tex; mode=display">
+hint = k\cdot p+20242025^e</script><p>这好办了，我们已知$20242025$与$e$</p>
+<p>那么有</p>
+<script type="math/tex; mode=display">
+k\cdot p = hint-20242025^e</script><p>为了加快计算，我们也是统一模上n</p>
+<p>最终我们有</p>
+<script type="math/tex; mode=display">
+k\cdot p \equiv hint-20242025^e \mod n</script><p>求$k\cdot p$与$n$的最大公因数，得到p</p>
+<p>[1]降模：笔者自己的叫法，</p>
+<script type="math/tex; mode=display">
+n = p\cdot q\\
+a \equiv b \mod n\\
+a = b + k\cdot n\\
+\#两边同时模上p\\
+a\equiv b+ k\cdot p\cdot q \mod p\\
+a\equiv b \mod p</script>
     
 
     
@@ -340,7 +418,7 @@ hint2 &\equiv m^{q} +k_2\cdot p……④
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#getflag2"><span class="toc-number">1.</span> <span class="toc-text">getflag2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getflag1"><span class="toc-number">2.</span> <span class="toc-text">getflag1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getflag3"><span class="toc-number">3.</span> <span class="toc-text">getflag3</span></a></li></ol>
                     </div>
                 </span>
             </div>
